@@ -1,14 +1,14 @@
 entries:
-- title: Product Title
-  product: Product Title<br/>
-  version: 1.0.0-alpha.1
+- title: FHIR Patient Profile
+  product: FHIR Patient Profile<br/>
+  version: Draft A 1.0
   levels: one
   folders:
 
-  - title: Get Started
+  - title: Overview
     output: web
     folderitems:
-    - title: Introduction
+    - title: About
       url: /index.html
       output: web, pdf
       type: homepage
