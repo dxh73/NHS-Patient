@@ -1,0 +1,1 @@
+Supporting information is based on a constrained FHIR Observation resource which is used to support diagnosis, monitor progress, determine baselines and patterns and even capture demographic characteristics. 

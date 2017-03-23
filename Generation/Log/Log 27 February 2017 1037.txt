@@ -1,0 +1,38 @@
+
+***Furnace log date run: 27 February 2017 1037 ***
+Furnace: Fhir publisher tool version: 2.7.6256.31052
+***Starting generation***
+Source directory: C:\git\NHS-FHIR-DDS\Generation 
+ Target Directory: C:\git\NHS-FHIR-DDS\Generated
+Clear down Generated folder
+Copying files into Schemas folder ...
+Copying files into dist folder ...
+Start: creating IGResource.xml
+End: IGResource.xml created
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Create folder Profile.DDS-Report
+**Error** 
+ Message:  valuesets\*.xml does not exist in C:\git\NHS-FHIR-DDS\Generation\Profile.DDS-Report! 
+ Stacktrace:    at Hl7.Fhir.Publication.Framework.Make.Interpreter.InterpretLine(Context context, Line line, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Make\Interpreter.cs:line 63
+   at Hl7.Fhir.Publication.Framework.Make.Interpreter.<>c__DisplayClass1_0.<InterpretMakeFile>b__2(Line line) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Make\Interpreter.cs:line 35
+   at System.Linq.Enumerable.<>c__DisplayClass2`3.<CombineSelectors>b__3(TSource x)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at Hl7.Fhir.Publication.Framework.Make.Interpreter.InterpretMakeFile(String makeFileText, Context context, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Make\Interpreter.cs:line 32
+   at Hl7.Fhir.Publication.Processors.MakeForAllProcessor.Process(Document input, Stage output, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\MakeForAllProcessor.cs:line 41
+   at Hl7.Fhir.Publication.Framework.Processor.Process(IProcessor processor, Stage input, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 16
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, Stage input, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, ISelector filter, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 38
+   at Hl7.Fhir.Publication.Framework.Statement.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Statement.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Make.Bulk.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Make\Bulk.cs:line 25
+   at Hl7.Fhir.Publication.Framework.Publisher.Publish() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Publisher.cs:line 80 
+ InnerException: 

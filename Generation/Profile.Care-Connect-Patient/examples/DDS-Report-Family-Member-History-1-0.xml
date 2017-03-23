@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--This example shows a family member (mother) related to the patient subject. The mother died of a stroke.-->
+<FamilyMemberHistory xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir  ../../Schemas/familymemberhistory.xsd">
+	<!--The id for this entity-->
+	<id value="3CDC5133-1A2E-461F-8BAF-E09ACFA49AF6"/>
+	<!--Identifies the profile being used-->
+	<meta>
+		<profile value="http://fhir.nhs.net/StructureDefinition/dds-report-family-member-history-1-0"/>
+	</meta>
+	<identifier>
+		<use value="usual"/>
+		<system value="http://www.mmc.nhs.uk/fmh-id"/>
+		<value value="MMCFMH8997654"/>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/78D64BB3-B5B2-450B-AEB7-D9035EBC711D"/>
+			<display value="MGP Medical Centre"/>
+		</assigner>
+	</identifier>
+	<patient>
+		<!-- This is reference to the patient profile elsewhere in the message -->
+		<reference value="Patient/B2D4B85D-AC24-4E9C-A368-588C3F34F570"/>
+		<display value="William Arthur Smith"/>
+	</patient>
+	<!--The date the information was recorded.-->
+	<date value="2013-09-17T10:30:30+01:00"/>
+	<status value="completed"/>
+	<!--The name and relevant details of the family member described.-->
+	<name value="Muriel Smith"/>
+	<relationship>
+		<coding>
+			<system value="http://fhir.nhs.net/ValueSet/cda-person-relationship-type-1-0"/>
+			<code value="12"/>
+			<display value="Mother"/>
+		</coding>
+	</relationship>
+	<gender value="female"/>
+	<deceasedDate value="2013-07-14"/>
+	<condition>
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/condition-code"/>
+				<code value="371041009"/>
+				<display value="Embolic Stroke"/>
+			</coding>
+			<text value="Stroke"/>
+		</code>
+		<outcome>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/condition-outcome"/>
+				<code value="deceased"/>
+				<display value="Deceased"/>
+			</coding>
+		</outcome>
+		<onsetQuantity>
+			<value value="62"/>
+			<unit value="year"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="a"/>
+		</onsetQuantity>
+	</condition>
+</FamilyMemberHistory>

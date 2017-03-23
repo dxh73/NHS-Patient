@@ -1,0 +1,1 @@
+This constrained FHIR resource shows significant health events and conditions for a person related to the patient relevant in the context of care for the patient.

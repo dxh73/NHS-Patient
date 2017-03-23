@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--This example shows a sample teaching hospitals' pathology service.-->
+<Organization xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/organization.xsd">
+	<id value="223F5C66-66BF-4CEA-A5D7-25AB9348B448"/>
+	<meta>
+		<!--Identifies the profile being used-->
+		<profile value="http://fhir.nhs.net/StructureDefinition/dds-report-organisation-1-0"/>
+	</meta>
+	<!--Organisation identifier - this example has a locally defined organisation code.-->
+	<identifier>
+		<use value="usual"/>
+		<system value="http://fhir.nhs.net/Id/local-organization-code"/>
+		<value value="RR80001PATH"/>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/223F5C66-66BF-4CEA-A5D7-25AB9348B448"/>
+		</assigner>
+	</identifier>
+	<!-- Type of organisation. -->
+	<type>
+		<coding>
+			<system value="http://fhir.nhs.net/ValueSet/organisation-type-1-0"/>
+			<code value="TR"/>
+			<display value="NHS Trust"/>
+		</coding>
+	</type>
+	<name value="Sampletown Teaching Hospitals, Pathology Services"/>
+	<telecom>
+		<system value="phone"/>
+		<value value="01133928766"/>
+		<use value="work"/>
+	</telecom>
+	<address>
+		<type value="both"/>
+		<line value="Pathology Services"/>
+		<line value="Sampletown Teaching Hospitals NHS Trust"/>
+		<city value="Sampletown"/>
+		<district value="West Yorkshire"/>
+		<postalCode value="LS1 3EX"/>
+	</address>
+</Organization>

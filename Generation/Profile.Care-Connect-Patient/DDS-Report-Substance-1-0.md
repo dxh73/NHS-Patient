@@ -1,0 +1,2 @@
+A medication is a substance that is packaged and used as an administered medication. The medication resource uses the substance resource to represent the actual ingredients of a medication.
+For substances in Diagnostic Data Services, it would be used for medication that the patient is / has been prescribed or for substances used for/during processing of a specimen.

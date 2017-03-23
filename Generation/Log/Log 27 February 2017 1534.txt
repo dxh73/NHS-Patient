@@ -1,0 +1,181 @@
+
+***Furnace log date run: 27 February 2017 1534 ***
+Furnace: Fhir publisher tool version: 2.7.6256.31052
+***Starting generation***
+Source directory: C:\git\NHS-FHIR-DDS\Generation 
+ Target Directory: C:\git\NHS-FHIR-DDS\Generated
+Clear down Generated folder
+Copying files into Schemas folder ...
+Copying files into dist folder ...
+Start: creating IGResource.xml
+End: IGResource.xml created
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Create folder Profile.DDS-Report
+IG Creation - Adding CareConnect-Organization-1 to IGResource.xml
+            - Adding Profile.DDS-Report package to IGResource.xml
+            - Saving CareConnect-Organization-1.xml in StructureDefinition folder
+IG Creation - CareConnect-Organization-1 finished
+IG Creation - Adding CareConnect-Practitioner-1 to IGResource.xml
+            - Saving CareConnect-Practitioner-1.xml in StructureDefinition folder
+IG Creation - CareConnect-Practitioner-1 finished
+IG Creation - Adding DDS-Report-1-0 to IGResource.xml
+            - Saving DDS-Report-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-1-0 finished
+IG Creation - Adding DDS-Report-Device-1-0 to IGResource.xml
+            - Saving DDS-Report-Device-1-0.xml in examples folder
+            - Saving DDS-Report-Device-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Device-1-0 finished
+IG Creation - Adding DDS-Report-Family-Member-History-1-0 to IGResource.xml
+            - Saving DDS-Report-Family-Member-History-1-0.xml in examples folder
+            - Saving DDS-Report-Family-Member-History-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Family-Member-History-1-0 finished
+IG Creation - Adding DDS-Report-Observation-1-0 to IGResource.xml
+            - Saving DDS-Report-Observation-1-0-FBC.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-BT.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-Microbiology.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-Histopathology.xml in examples folder
+            - Saving DDS-Report-Observation-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Observation-1-0 finished
+IG Creation - Adding DDS-Report-Patient-1-0 to IGResource.xml
+            - Saving DDS-Report-Patient-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Patient-1-0-Ex02.xml in examples folder
+            - Saving DDS-Report-Patient-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Patient-1-0 finished
+IG Creation - Adding DDS-Report-Specimen-1-0 to IGResource.xml
+            - Saving DDS-Report-Specimen-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Specimen-1-0-Ex02.xml in examples folder
+            - Saving DDS-Report-Specimen-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Specimen-1-0 finished
+IG Creation - Adding DDS-Report-Substance-1-0 to IGResource.xml
+            - Saving DDS-Report-Substance-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Substance-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Substance-1-0 finished
+IG Creation - Adding DDS-Report-Supporting-Information-Observation-1-0 to IGResource.xml
+            - Saving DDS-Report-Supporting-Information-Observation-1-0.xml in examples folder
+            - Saving DDS-Report-Supporting-Information-Observation-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Supporting-Information-Observation-1-0 finished
+IG Creation - Adding CareConnect-AdministrativeGender-1 to IGResource.xml
+            - Saving CareConnect-AdministrativeGender-1.xml in ValueSet folder
+IG Creation - CareConnect-AdministrativeGender-1 finished
+IG Creation - Adding CareConnect-HumanLanguage-1 to IGResource.xml
+            - Saving CareConnect-HumanLanguage-1.xml in ValueSet folder
+IG Creation - CareConnect-HumanLanguage-1 finished
+IG Creation - Adding CareConnect-MaritalStatus-1 to IGResource.xml
+            - Saving CareConnect-MaritalStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-MaritalStatus-1 finished
+IG Creation - Adding CareConnect-MaritalStatus-DDMAP-1 to IGResource.xml
+            - Saving CareConnect-MaritalStatus-DDMAP-1.xml in ValueSet folder
+IG Creation - CareConnect-MaritalStatus-DDMAP-1 finished
+IG Creation - Adding CareConnect-NhsNumberVerificationStatus-1 to IGResource.xml
+            - Saving CareConnect-NhsNumberVerificationStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-NhsNumberVerificationStatus-1 finished
+IG Creation - Adding CareConnect-PersonRelationshipType-1 to IGResource.xml
+            - Saving CareConnect-PersonRelationshipType-1.xml in ValueSet folder
+IG Creation - CareConnect-PersonRelationshipType-1 finished
+IG Creation - Adding CareConnect-PersonStatedGender-DDMAP-1 to IGResource.xml
+            - Saving CareConnect-PersonStatedGender-DDMAP-1.xml in ValueSet folder
+IG Creation - CareConnect-PersonStatedGender-DDMAP-1 finished
+IG Creation - Adding CareConnect-SDSJobRoleName-1 to IGResource.xml
+            - Saving CareConnect-SDSJobRoleName-1.xml in ValueSet folder
+IG Creation - CareConnect-SDSJobRoleName-1 finished
+IG Creation - Adding Organization-Type-1 to IGResource.xml
+            - Saving Organization-Type-1.xml in ValueSet folder
+IG Creation - Organization-Type-1 finished
+Create folder Profile.DDS-Request
+IG Creation - Adding CareConnect-Organization-1 to IGResource.xml
+            - Adding Profile.DDS-Request package to IGResource.xml
+            - Saving CareConnect-Organization-1.xml in StructureDefinition folder
+IG Creation - CareConnect-Organization-1 finished
+IG Creation - Adding CareConnect-Practitioner-1 to IGResource.xml
+            - Saving CareConnect-Practitioner-1.xml in StructureDefinition folder
+IG Creation - CareConnect-Practitioner-1 finished
+IG Creation - Adding DDS-Report-Substance-1-0 to IGResource.xml
+            - Saving DDS-Report-Substance-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Substance-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Substance-1-0 finished
+IG Creation - Adding DDS-Request-1-0 to IGResource.xml
+            - Saving DDS-Request-1-0-Ex01.xml in examples folder
+            - Saving DDS-Request-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Request-1-0 finished
+IG Creation - Adding DDS-Request-Patient-1-0 to IGResource.xml
+            - Saving DDS-Request-Patient-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Request-Patient-1-0 finished
+IG Creation - Adding DDS-Request-Specimen-1-0 to IGResource.xml
+            - Saving DDS-Request-Specimen-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Request-Specimen-1-0 finished
+IG Creation - Adding CareConnect-AdministrativeGender-1 to IGResource.xml
+            - Saving CareConnect-AdministrativeGender-1.xml in ValueSet folder
+IG Creation - CareConnect-AdministrativeGender-1 finished
+IG Creation - Adding CareConnect-HumanLanguage-1 to IGResource.xml
+            - Saving CareConnect-HumanLanguage-1.xml in ValueSet folder
+IG Creation - CareConnect-HumanLanguage-1 finished
+IG Creation - Adding CareConnect-MaritalStatus-1 to IGResource.xml
+            - Saving CareConnect-MaritalStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-MaritalStatus-1 finished
+IG Creation - Adding CareConnect-MaritalStatus-DDMAP-1 to IGResource.xml
+            - Saving CareConnect-MaritalStatus-DDMAP-1.xml in ValueSet folder
+IG Creation - CareConnect-MaritalStatus-DDMAP-1 finished
+IG Creation - Adding CareConnect-NhsNumberVerificationStatus-1 to IGResource.xml
+            - Saving CareConnect-NhsNumberVerificationStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-NhsNumberVerificationStatus-1 finished
+IG Creation - Adding CareConnect-PersonRelationshipType-1 to IGResource.xml
+            - Saving CareConnect-PersonRelationshipType-1.xml in ValueSet folder
+IG Creation - CareConnect-PersonRelationshipType-1 finished
+IG Creation - Adding CareConnect-PersonStatedGender-DDMAP-1 to IGResource.xml
+            - Saving CareConnect-PersonStatedGender-DDMAP-1.xml in ValueSet folder
+IG Creation - CareConnect-PersonStatedGender-DDMAP-1 finished
+IG Creation - Adding CareConnect-SDSJobRoleName-1 to IGResource.xml
+            - Saving CareConnect-SDSJobRoleName-1.xml in ValueSet folder
+IG Creation - CareConnect-SDSJobRoleName-1 finished
+IG Creation - Adding DDS-Organization-Type-1 to IGResource.xml
+            - Saving DDS-Organization-Type-1.xml in ValueSet folder
+IG Creation - DDS-Organization-Type-1 finished
+Profile Table: IGResource.
+Loading resources into resource store
+Create directory C:\git\NHS-FHIR-DDS\Generated\Profile.DDS-Report
+Render profile table Profile.DDS-Report
+Loading resources into resource store
+Create directory C:\git\NHS-FHIR-DDS\Generated\Profile.DDS-Request
+Render profile table Profile.DDS-Request
+Profile Table: Finish - IGResource
+Loading resources into resource store
+Structure Page: Start - Profile.DDS-Report : CareConnect-Organization-1
+Creating structure for CareConnect-Organization-1
+CreateRow Organization( Organization )
+CreateRow Organization.id( Organization )
+CreateRow Organization.meta( Organization )
+CreateRow Organization.implicitRules( Organization )
+CreateRow Organization.language( Organization )
+CreateRow Organization.text( Organization )
+CreateRow Organization.contained( Organization )
+CreateRow Organization.extension( Organization )
+CreateRow Organization.extension( Organization )
+**Error** 
+ Message:  StructureDefinition resource with url: https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MainLocation-1 does not exist in Profile.DDS-Report! 
+ Stacktrace:    at Hl7.Fhir.Publication.ImplementationGuide.ResourceStore.GetStructureDefinitionByUrl(String url, String package) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\ImplementationGuide\ResourceStore.cs:line 57
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.SetElementNameIfModifer(ElementDefinition elementDefinition) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 257
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.CreateRow(ElementDefinition elementDefinition, StructureDefinition profile, Boolean showMissing, ICollection`1 rows, ElementNavigator navigator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 143
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.GetElementRow(ICollection`1 rows, ElementNavigator navigator, StructureDefinition profile, Boolean showMissing) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 116
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.CreateRow(ElementDefinition elementDefinition, StructureDefinition profile, Boolean showMissing, ICollection`1 rows, ElementNavigator navigator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 238
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.GetElementRow(ICollection`1 rows, ElementNavigator navigator, StructureDefinition profile, Boolean showMissing) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 116
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.GenerateStructure(StructureDefinition structure, Boolean isDifferential) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 92
+   at Hl7.Fhir.Publication.Processors.Profile.StructureProcessor.CreateStructureDefinitionPage(ResourceComponent resource) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\Profile\StructureProcessor.cs:line 113
+   at Hl7.Fhir.Publication.Processors.Profile.StructureProcessor.CreatePagesInPackage() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\Profile\StructureProcessor.cs:line 91
+   at Hl7.Fhir.Publication.Processors.Profile.StructureProcessor.Process(Document input, Stage output, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\Profile\StructureProcessor.cs:line 63
+   at Hl7.Fhir.Publication.Framework.Processor.Process(IProcessor processor, Stage input, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 16
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, Stage input, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, ISelector filter, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 38
+   at Hl7.Fhir.Publication.Framework.Statement.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Statement.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Make.Bulk.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Make\Bulk.cs:line 25
+   at Hl7.Fhir.Publication.Framework.Publisher.Publish() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Publisher.cs:line 80 
+ InnerException: 

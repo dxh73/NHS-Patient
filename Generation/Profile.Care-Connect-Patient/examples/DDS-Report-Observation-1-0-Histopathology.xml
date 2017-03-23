@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--This is an example for a Cytology cervical screening (PAP) test.-->
+<Observation xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir  ../../Schemas/observation.xsd">
+	<!--The id for this entity-->
+	<id value="4862C5DD-8D02-475E-A0EC-66BA47BFD282"/>
+	<!--Identifies the profile being used-->
+	<meta>
+		<profile value="http://fhir.nhs.net/StructureDefinition/dds-report-observation-1-0"/>
+	</meta>
+	<identifier>
+		<use value="usual"/>
+		<system value="http://www.sampleth.nhs.uk/pathology/cellularpathology/labno"/>
+		<value value="CP8667800015"/>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/223F5C66-66BF-4CEA-A5D7-25AB9348B448"/>
+		</assigner>
+	</identifier>
+	<status value="final"/>
+	<category>
+		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/observation-category"/>
+			<code value="laboratory"/>
+			<display value="Laboratory"/>
+		</coding>
+	</category>
+	<!--Subject matter experts to be consulted on appropriate SNOMED code.-->
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value=" 1020451000000104"/>
+			<display value="Cervical cytology test"/>
+			<userSelected value="true"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/9A66024B-0546-4088-B20E-DFF3C2C00FCE"/>
+		<display value="Chrystal Jones"/>
+	</subject>
+	<effectiveDateTime value="2016-02-11T11:06:25+01:00"/>
+	<issued value="2016-02-14T10:06:27+01:00"/>
+	<!--Would it be appropriate for this observation to have a value here e.g. only one result?-->
+	<valueString value="Mild dyskaryosis."/>
+	<!--Would this be an appropriate comment for this test scenario?-->
+	<comments value="Low-grade changes which may be associated with wart virus (HPV) infection."/>
+	<bodySite>
+		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/body-site"/>
+			<code value="71252005"/>
+			<display value="Cervix uteri structure"/>
+		</coding>
+	</bodySite>
+	<!--Observation method-->
+	<method>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="996261000000103"/>
+			<display value="Cervical cytology screening test"/>
+		</coding>
+	</method>
+	<specimen>
+		<!--Reference to specimen elsewhere in the message-->
+		<reference value="Specimen/DE756619-4DB4-4C51-9FFB-9DDC8682C96"/>
+	</specimen>
+	<!--Need to clarify if reference ranges apply to this test; probably unlikely.-->
+	<referenceRange>
+		<low>
+		</low>
+		<high>
+		</high>
+		<text/>
+	</referenceRange>
+	<!-- The only components I could find were procedures, not observations. Would these be carried within the specimen treatment element as they are procedures?-->
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="880941000000101"/>
+				<display value="Cervical smear - low grade dyskaryosis"/>
+			</coding>
+		</code>
+		<valueString value="Low grade dyskaryosis"/>
+		<!--Need to clarify if reference ranges apply to this test.-->
+		<referenceRange>
+			<low>
+			</low>
+			<high>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<!--Subject matter experts to be consulted on appropriate SNOMED code.-->
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value=" 391147004"/>
+				<display value=" Human papillomavirus test positive"/>
+			</coding>
+		</code>
+		<valueString value="Sample shows low-grade changes often associated with HPV; likely to return to normal without treatment."/>
+		<!--Need to clarify if reference ranges apply to this test-->
+		<referenceRange>
+			<low>
+			</low>
+			<high>
+			</high>
+		</referenceRange>
+	</component>
+</Observation>

@@ -1,0 +1,109 @@
+
+***Furnace log date run: 27 February 2017 1157 ***
+Furnace: Fhir publisher tool version: 2.7.6256.31052
+***Starting generation***
+Source directory: C:\git\NHS-FHIR-DDS\Generation 
+ Target Directory: C:\git\NHS-FHIR-DDS\Generated
+Clear down Generated folder
+Copying files into Schemas folder ...
+Copying files into dist folder ...
+Start: creating IGResource.xml
+End: IGResource.xml created
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Create folder Profile.DDS-Report
+IG Creation - Adding DDS-Report-1-0 to IGResource.xml
+            - Adding Profile.DDS-Report package to IGResource.xml
+            - Saving DDS-Report-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-1-0 finished
+IG Creation - Adding DDS-Report-Device-1-0 to IGResource.xml
+            - Saving DDS-Report-Device-1-0.xml in examples folder
+            - Saving DDS-Report-Device-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Device-1-0 finished
+IG Creation - Adding DDS-Report-Family-Member-History-1-0 to IGResource.xml
+            - Saving DDS-Report-Family-Member-History-1-0.xml in examples folder
+            - Saving DDS-Report-Family-Member-History-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Family-Member-History-1-0 finished
+IG Creation - Adding DDS-Report-Observation-1-0 to IGResource.xml
+            - Saving DDS-Report-Observation-1-0-FBC.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-BT.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-Microbiology.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-Histopathology.xml in examples folder
+            - Saving DDS-Report-Observation-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Observation-1-0 finished
+IG Creation - Adding DDS-Report-Organization-1-0 to IGResource.xml
+            - Saving DDS-Report-Organization-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Organization-1-0-Ex02.xml in examples folder
+            - Saving DDS-Report-Organization-1-0-Ex03.xml in examples folder
+            - Saving DDS-Report-Organization-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Organization-1-0 finished
+IG Creation - Adding DDS-Report-Patient-1-0 to IGResource.xml
+            - Saving DDS-Report-Patient-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Patient-1-0-Ex02.xml in examples folder
+            - Saving DDS-Report-Patient-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Patient-1-0 finished
+IG Creation - Adding DDS-Report-Practitioner-1-0 to IGResource.xml
+            - Saving DDS-Report-Practitioner-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Practitioner-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Practitioner-1-0 finished
+IG Creation - Adding DDS-Report-Specimen-1-0 to IGResource.xml
+            - Saving DDS-Report-Specimen-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Specimen-1-0-Ex02.xml in examples folder
+            - Saving DDS-Report-Specimen-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Specimen-1-0 finished
+IG Creation - Adding DDS-Report-Substance-1-0 to IGResource.xml
+            - Saving DDS-Report-Substance-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Substance-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Substance-1-0 finished
+IG Creation - Adding DDS-Report-Supporting-Information-Observation-1-0 to IGResource.xml
+            - Saving DDS-Report-Supporting-Information-Observation-1-0.xml in examples folder
+            - Saving DDS-Report-Supporting-Information-Observation-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Supporting-Information-Observation-1-0 finished
+IG Creation - Adding CareConnect-AdministrativeGender-1 to IGResource.xml
+            - Saving CareConnect-AdministrativeGender-1.xml in ValueSet folder
+IG Creation - CareConnect-AdministrativeGender-1 finished
+IG Creation - Adding CareConnect-HumanLanguage-1 to IGResource.xml
+            - Saving CareConnect-HumanLanguage-1.xml in ValueSet folder
+IG Creation - CareConnect-HumanLanguage-1 finished
+IG Creation - Adding CareConnect-MaritalStatus-1 to IGResource.xml
+            - Saving CareConnect-MaritalStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-MaritalStatus-1 finished
+IG Creation - Adding CareConnect-NhsNumberVerificationStatus-1 to IGResource.xml
+            - Saving CareConnect-NhsNumberVerificationStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-NhsNumberVerificationStatus-1 finished
+IG Creation - Adding CareConnect-PersonRelationshipType-1 to IGResource.xml
+            - Saving CareConnect-PersonRelationshipType-1.xml in ValueSet folder
+IG Creation - CareConnect-PersonRelationshipType-1 finished
+IG Creation - Adding CareConnect-SDSJobRoleName-1 to IGResource.xml
+            - Saving CareConnect-SDSJobRoleName-1.xml in ValueSet folder
+IG Creation - CareConnect-SDSJobRoleName-1 finished
+IG Creation - Adding DDS-Orgnaization-Type-1 to IGResource.xml
+**Error** 
+ Message: Cannot parse xml: An error occurred while parsing EntityName. Line 142, position 46. 
+ Stacktrace:    at Hl7.Fhir.Serialization.XmlDomFhirReader..ctor(XmlReader reader) in C:\Git\fhir-net-api\src\Hl7.Fhir.Core\Serialization\XmlDomFhirReader.cs:line 44
+   at Hl7.Fhir.Serialization.FhirParser.ParseFromXml(String xml, Type dataType) in C:\Git\fhir-net-api\src\Hl7.Fhir.Core\Serialization\FhirParser.cs:line 316
+   at Hl7.Fhir.Publication.ImplementationGuide.Factory.GetResourceFromXml() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\ImplementationGuide\Factory.cs:line 72
+   at Hl7.Fhir.Publication.ImplementationGuide.Factory..ctor(Log log, Base implementationGuide, Document input, IDirectoryCreator directoryCreator, String profileFolder, String fileName) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\ImplementationGuide\Factory.cs:line 63
+   at Hl7.Fhir.Publication.Processors.ImplementationGuide.IgPackageProcessor.Process(Document input, Stage output, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\ImplementationGuide\PackageProcessor.cs:line 83
+   at Hl7.Fhir.Publication.Framework.Processor.Process(IProcessor processor, Stage input, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 16
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, Stage input, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, ISelector filter, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 38
+   at Hl7.Fhir.Publication.Framework.Statement.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Statement.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Make.Bulk.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Make\Bulk.cs:line 25
+   at Hl7.Fhir.Publication.Processors.MakeForAllProcessor.Process(Document input, Stage output, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\MakeForAllProcessor.cs:line 42
+   at Hl7.Fhir.Publication.Framework.Processor.Process(IProcessor processor, Stage input, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 16
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, Stage input, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, ISelector filter, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 38
+   at Hl7.Fhir.Publication.Framework.Statement.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Statement.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Make.Bulk.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Make\Bulk.cs:line 25
+   at Hl7.Fhir.Publication.Framework.Publisher.Publish() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Publisher.cs:line 80 
+ InnerException: 

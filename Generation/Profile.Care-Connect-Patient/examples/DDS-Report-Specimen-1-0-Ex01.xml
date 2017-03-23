@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--An example of a blood specimen.-->
+<Specimen xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schemas/specimen.xsd">
+	<id value="b603cede-8c3f-4909-9cb1-d47c0fde9f8a"/>
+	<meta>
+		<!--Identifies the profile being used-->
+		<profile value="http://fhir.nhs.net/StructureDefinition/dds-report-specimen-1-0"/>
+	</meta>
+	<identifier>
+		<use value="official"/>
+		<system value="http://mmp.nhs.uk/id/specimen-id"/>
+		<!-- Unique identifier of the specimen assigned by requester - UUID is used as an example only -->
+		<value value="b603cede-8c3f-4909-9cb1-d47c0fde9f8a"/>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/78d64bb3-b5b2-450b-aeb7-d9035ebc711d"/>
+			<display value="MGP Medical Centre"/>
+		</assigner>
+	</identifier>
+	<!-- The specimen type - may revert to use of FHIR valueset once its suitability has been confirmed.-->
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value=" 20150731"/>
+			<code value="119297000"/>
+			<display value="blood specimen"/>
+		</coding>
+	</type>
+	<subject>
+		<!-- Reference to the patient profile carried elsewhere in the message-->
+		<reference value="Patient/b2d4b85d-ac24-4e9c-a368-588c3f34f570"/>
+		<display value="William Arthur Smith"/>
+	</subject>
+	<!-- Identifier assigned by the lab-->
+	<accessionIdentifier>
+		<system value="http://www.sampleth.nhs.uk/pathology/bloodsciences/labno"/>
+		<value value="HAEM8667800001"/>
+		<!--When the accession ID was first issued-->
+		<period>
+			<start value="2016-01-03T09:00:00+01:00"/>
+		</period>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/223f5c66-66bf-4cea-a5d7-25ab9348b448"/>
+		</assigner>
+	</accessionIdentifier>
+	<receivedTime value="2016-01-03T09:05:00+01:00"/>
+	<collection>
+		<!-- This is a reference to the practitioner profile elsewhere in the message -->
+		<collector>
+			<reference value="Practitioner/4bfca0ef-85d0-4c5e-b662-d4910bb83d82"/>
+			<display value="Dr. Jones"/>
+		</collector>
+		<!-- Quantity collected. -->
+		<quantity>
+			<value value="6"/>
+			<unit value="millilitre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="mL"/>
+		</quantity>
+		<!--Method of specimen collection using SNOMEDCT codes-->
+		<method>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="32564009"/>
+				<display value="arterial specimen collection for laboratory test"/>
+			</coding>
+		</method>
+		<bodySite>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/body-site"/>
+				<code value="308046002"/>
+				<display value="Structure of superficial forearm vein"/>
+			</coding>
+		</bodySite>
+	</collection>
+	<!-- This may need data relating to the processing of and procedures performed on the specimen, if any. Need to consult Subject matter experts.-->
+	<treatment>
+	</treatment>
+	<!-- Description of the container of the specimen. -->
+	<container>
+		<identifier>
+			<system value="http://mmp.nhs.uk/id/container-id"/>
+			<value value="08fc96c4-eb3a-46d3-93c5-4b23792dcc1c"/>
+			<assigner>
+				<!-- This can be a reference to the profile elsewhere in the message or just text -->
+				<reference value="Organisation/78d64bb3-b5b2-450b-aeb7-d9035ebc711d"/>
+				<display value="MGP Medical Centre"/>
+			</assigner>
+		</identifier>
+		<!--Type of container-->
+		<type>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value=" 20150731"/>
+				<code value="434746001"/>
+				<display value="Specimen vial"/>
+			</coding>
+		</type>
+		<capacity>
+			<value value="10"/>
+			<unit value="mL"/>
+			<system value="http://unitsofmeasure.org"/>
+		</capacity>
+		<specimenQuantity>
+			<value value="6"/>
+			<unit value="mL"/>
+			<system value="http://unitsofmeasure.org"/>
+		</specimenQuantity>
+	</container>
+</Specimen>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--This example shows a sample pharmaceutical company.-->
+<Organization xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/organization.xsd">
+	<id value="0A6F71A7-161D-4A84-8573-AB55DBB19340"/>
+	<meta>
+		<!--Identifies the profile being used-->
+		<profile value="http://fhir.nhs.net/StructureDefinition/dds-report-organisation-1-0"/>
+	</meta>
+	<!--Organisation identifier - this example has a locally defined organisation code.-->
+	<identifier>
+		<use value="usual"/>
+		<system value="http://fhir.nhs.net/Id/local-organization-code"/>
+		<value value="PHARM001"/>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/0A6F71A7-161D-4A84-8573-AB55DBB19340"/>
+		</assigner>
+	</identifier>
+	<!-- Type of organisation. Currently used valueset does not have a value which defines this type of organisation.-->
+	<type>
+		<coding>
+			<system value="http://fhir.nhs.net/ValueSet/organisation-type-1-0"/>
+			<code value="NN"/>
+			<display value="Non-NHS Organisation"/>
+		</coding>
+	</type>
+	<name value="Pharm Pharmaceuticals Limited"/>
+	<telecom>
+		<system value="phone"/>
+		<value value="01136870000"/>
+		<use value="work"/>
+	</telecom>
+	<telecom>
+		<system value="other"/>
+		<value value="www.pharm.com"/>
+		<use value="work"/>
+	</telecom>
+	<address>
+		<type value="both"/>
+		<line value="Pharm Pharmaceuticals Limited"/>
+		<line value="North Industrial Estate"/>
+		<city value="Sampletown"/>
+		<district value="West Yorkshire"/>
+		<postalCode value="LS10 7BY"/>
+	</address>
+</Organization>

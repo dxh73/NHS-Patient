@@ -1,0 +1,232 @@
+
+***Furnace log date run: 27 February 2017 137 ***
+Furnace: Fhir publisher tool version: 2.7.6256.31052
+***Starting generation***
+Source directory: C:\git\NHS-FHIR-DDS\Generation 
+ Target Directory: C:\git\NHS-FHIR-DDS\Generated
+Clear down Generated folder
+Copying files into Schemas folder ...
+Copying files into dist folder ...
+Start: creating IGResource.xml
+End: IGResource.xml created
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Markdown rendering - index 	: index.md
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Razor rendering index
+Create folder Profile.DDS-Report
+IG Creation - Adding DDS-Report-1-0 to IGResource.xml
+            - Adding Profile.DDS-Report package to IGResource.xml
+            - Saving DDS-Report-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-1-0 finished
+IG Creation - Adding DDS-Report-Device-1-0 to IGResource.xml
+            - Saving DDS-Report-Device-1-0.xml in examples folder
+            - Saving DDS-Report-Device-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Device-1-0 finished
+IG Creation - Adding DDS-Report-Family-Member-History-1-0 to IGResource.xml
+            - Saving DDS-Report-Family-Member-History-1-0.xml in examples folder
+            - Saving DDS-Report-Family-Member-History-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Family-Member-History-1-0 finished
+IG Creation - Adding DDS-Report-Observation-1-0 to IGResource.xml
+            - Saving DDS-Report-Observation-1-0-FBC.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-BT.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-Microbiology.xml in examples folder
+            - Saving DDS-Report-Observation-1-0-Histopathology.xml in examples folder
+            - Saving DDS-Report-Observation-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Observation-1-0 finished
+IG Creation - Adding DDS-Report-Organization-1-0 to IGResource.xml
+            - Saving DDS-Report-Organization-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Organization-1-0-Ex02.xml in examples folder
+            - Saving DDS-Report-Organization-1-0-Ex03.xml in examples folder
+            - Saving DDS-Report-Organization-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Organization-1-0 finished
+IG Creation - Adding DDS-Report-Patient-1-0 to IGResource.xml
+            - Saving DDS-Report-Patient-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Patient-1-0-Ex02.xml in examples folder
+            - Saving DDS-Report-Patient-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Patient-1-0 finished
+IG Creation - Adding DDS-Report-Practitioner-1-0 to IGResource.xml
+            - Saving DDS-Report-Practitioner-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Practitioner-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Practitioner-1-0 finished
+IG Creation - Adding DDS-Report-Specimen-1-0 to IGResource.xml
+            - Saving DDS-Report-Specimen-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Specimen-1-0-Ex02.xml in examples folder
+            - Saving DDS-Report-Specimen-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Specimen-1-0 finished
+IG Creation - Adding DDS-Report-Substance-1-0 to IGResource.xml
+            - Saving DDS-Report-Substance-1-0-Ex01.xml in examples folder
+            - Saving DDS-Report-Substance-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Substance-1-0 finished
+IG Creation - Adding DDS-Report-Supporting-Information-Observation-1-0 to IGResource.xml
+            - Saving DDS-Report-Supporting-Information-Observation-1-0.xml in examples folder
+            - Saving DDS-Report-Supporting-Information-Observation-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Report-Supporting-Information-Observation-1-0 finished
+IG Creation - Adding CareConnect-AdministrativeGender-1 to IGResource.xml
+            - Saving CareConnect-AdministrativeGender-1.xml in ValueSet folder
+IG Creation - CareConnect-AdministrativeGender-1 finished
+IG Creation - Adding CareConnect-HumanLanguage-1 to IGResource.xml
+            - Saving CareConnect-HumanLanguage-1.xml in ValueSet folder
+IG Creation - CareConnect-HumanLanguage-1 finished
+IG Creation - Adding CareConnect-MaritalStatus-1 to IGResource.xml
+            - Saving CareConnect-MaritalStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-MaritalStatus-1 finished
+IG Creation - Adding CareConnect-NhsNumberVerificationStatus-1 to IGResource.xml
+            - Saving CareConnect-NhsNumberVerificationStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-NhsNumberVerificationStatus-1 finished
+IG Creation - Adding CareConnect-PersonRelationshipType-1 to IGResource.xml
+            - Saving CareConnect-PersonRelationshipType-1.xml in ValueSet folder
+IG Creation - CareConnect-PersonRelationshipType-1 finished
+IG Creation - Adding CareConnect-SDSJobRoleName-1 to IGResource.xml
+            - Saving CareConnect-SDSJobRoleName-1.xml in ValueSet folder
+IG Creation - CareConnect-SDSJobRoleName-1 finished
+IG Creation - Adding DDS-Organization-Type-1 to IGResource.xml
+            - Saving DDS-Organization-Type-1.xml in ValueSet folder
+IG Creation - DDS-Organization-Type-1 finished
+Create folder Profile.DDS-Request
+IG Creation - Adding DDS-Request-1-0 to IGResource.xml
+            - Adding Profile.DDS-Request package to IGResource.xml
+            - Saving DDS-Request-1-0-Ex01.xml in examples folder
+            - Saving DDS-Request-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Request-1-0 finished
+IG Creation - Adding DDS-Request-Patient-1-0 to IGResource.xml
+            - Saving DDS-Request-Patient-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Request-Patient-1-0 finished
+IG Creation - Adding DDS-Request-Practitioner-1-0 to IGResource.xml
+            - Saving DDS-Request-Practitioner-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Request-Practitioner-1-0 finished
+IG Creation - Adding DDS-Request-Specimen-1-0 to IGResource.xml
+            - Saving DDS-Request-Specimen-1-0.xml in StructureDefinition folder
+IG Creation - DDS-Request-Specimen-1-0 finished
+IG Creation - Adding CareConnect-AdministrativeGender-1 to IGResource.xml
+            - Saving CareConnect-AdministrativeGender-1.xml in ValueSet folder
+IG Creation - CareConnect-AdministrativeGender-1 finished
+IG Creation - Adding CareConnect-HumanLanguage-1 to IGResource.xml
+            - Saving CareConnect-HumanLanguage-1.xml in ValueSet folder
+IG Creation - CareConnect-HumanLanguage-1 finished
+IG Creation - Adding CareConnect-MaritalStatus-1 to IGResource.xml
+            - Saving CareConnect-MaritalStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-MaritalStatus-1 finished
+IG Creation - Adding CareConnect-NhsNumberVerificationStatus-1 to IGResource.xml
+            - Saving CareConnect-NhsNumberVerificationStatus-1.xml in ValueSet folder
+IG Creation - CareConnect-NhsNumberVerificationStatus-1 finished
+IG Creation - Adding CareConnect-PersonRelationshipType-1 to IGResource.xml
+            - Saving CareConnect-PersonRelationshipType-1.xml in ValueSet folder
+IG Creation - CareConnect-PersonRelationshipType-1 finished
+IG Creation - Adding CareConnect-SDSJobRoleName-1 to IGResource.xml
+            - Saving CareConnect-SDSJobRoleName-1.xml in ValueSet folder
+IG Creation - CareConnect-SDSJobRoleName-1 finished
+IG Creation - Adding DDS-Organization-Type-1 to IGResource.xml
+            - Saving DDS-Organization-Type-1.xml in ValueSet folder
+IG Creation - DDS-Organization-Type-1 finished
+Profile Table: IGResource.
+Loading resources into resource store
+Create directory C:\git\NHS-FHIR-DDS\Generated\Profile.DDS-Report
+Render profile table Profile.DDS-Report
+Loading resources into resource store
+Create directory C:\git\NHS-FHIR-DDS\Generated\Profile.DDS-Request
+Render profile table Profile.DDS-Request
+Profile Table: Finish - IGResource
+Loading resources into resource store
+Structure Page: Start - Profile.DDS-Report : DDS-Report-1-0
+Creating structure for DDS-Report-1-0
+CreateRow DiagnosticReport( DiagnosticReport )
+CreateRow DiagnosticReport.identifier( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.use( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.type( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.type.coding( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.type.coding.system( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.type.coding.version( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.type.coding.code( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.type.coding.display( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.type.coding.userSelected( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.type.text( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.system( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.value( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.period( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.period.start( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.period.end( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.assigner( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.assigner.reference( DiagnosticReport )
+CreateRow DiagnosticReport.identifier.assigner.display( DiagnosticReport )
+CreateRow DiagnosticReport.status( DiagnosticReport )
+CreateRow DiagnosticReport.category( DiagnosticReport )
+CreateRow DiagnosticReport.category.coding( DiagnosticReport )
+CreateRow DiagnosticReport.category.coding.system( DiagnosticReport )
+CreateRow DiagnosticReport.category.coding.version( DiagnosticReport )
+CreateRow DiagnosticReport.category.coding.code( DiagnosticReport )
+CreateRow DiagnosticReport.category.coding.display( DiagnosticReport )
+CreateRow DiagnosticReport.category.coding.userSelected( DiagnosticReport )
+CreateRow DiagnosticReport.category.text( DiagnosticReport )
+CreateRow DiagnosticReport.code( DiagnosticReport )
+CreateRow DiagnosticReport.code.coding( DiagnosticReport )
+CreateRow DiagnosticReport.code.coding.system( DiagnosticReport )
+CreateRow DiagnosticReport.code.coding.version( DiagnosticReport )
+CreateRow DiagnosticReport.code.coding.code( DiagnosticReport )
+CreateRow DiagnosticReport.code.coding.display( DiagnosticReport )
+CreateRow DiagnosticReport.code.coding.userSelected( DiagnosticReport )
+CreateRow DiagnosticReport.code.text( DiagnosticReport )
+CreateRow DiagnosticReport.subject( DiagnosticReport )
+CreateRow DiagnosticReport.effective[x]( DiagnosticReport )
+CreateRow DiagnosticReport.issued( DiagnosticReport )
+CreateRow DiagnosticReport.performer( DiagnosticReport )
+CreateRow DiagnosticReport.request( DiagnosticReport )
+CreateRow DiagnosticReport.specimen( DiagnosticReport )
+CreateRow DiagnosticReport.specimen.reference( DiagnosticReport )
+CreateRow DiagnosticReport.specimen.display( DiagnosticReport )
+CreateRow DiagnosticReport.result( DiagnosticReport )
+CreateRow DiagnosticReport.result.reference( DiagnosticReport )
+CreateRow DiagnosticReport.result.display( DiagnosticReport )
+CreateRow DiagnosticReport.imagingStudy( DiagnosticReport )
+CreateRow DiagnosticReport.image( DiagnosticReport )
+CreateRow DiagnosticReport.image.modifierExtension( DiagnosticReport )
+CreateRow DiagnosticReport.image.comment( DiagnosticReport )
+CreateRow DiagnosticReport.image.link( DiagnosticReport )
+CreateRow DiagnosticReport.image.link.reference( DiagnosticReport )
+CreateRow DiagnosticReport.image.link.display( DiagnosticReport )
+CreateRow DiagnosticReport.conclusion( DiagnosticReport )
+CreateRow DiagnosticReport.codedDiagnosis( DiagnosticReport )
+CreateRow DiagnosticReport.codedDiagnosis.coding( DiagnosticReport )
+CreateRow DiagnosticReport.codedDiagnosis.coding.system( DiagnosticReport )
+CreateRow DiagnosticReport.codedDiagnosis.coding.version( DiagnosticReport )
+CreateRow DiagnosticReport.codedDiagnosis.coding.code( DiagnosticReport )
+CreateRow DiagnosticReport.codedDiagnosis.coding.display( DiagnosticReport )
+CreateRow DiagnosticReport.codedDiagnosis.coding.userSelected( DiagnosticReport )
+CreateRow DiagnosticReport.codedDiagnosis.text( DiagnosticReport )
+CreateRow DiagnosticReport.presentedForm( DiagnosticReport )
+CreateRow DiagnosticReport.presentedForm.contentType( DiagnosticReport )
+CreateRow DiagnosticReport.presentedForm.language( DiagnosticReport )
+**Error** 
+ Message:  ValueSet resource with url: http://fhir.nhs.net/ValueSet/human-language-1-0 does not exist in Profile.DDS-Report! 
+ Stacktrace:    at Hl7.Fhir.Publication.ImplementationGuide.ResourceStore.GetValuesetByUrl(String url, String package) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\ImplementationGuide\ResourceStore.cs:line 103
+   at Hl7.Fhir.Publication.ImplementationGuide.ResourceStore.GetValuesetNameByUrl(String url, String package) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\ImplementationGuide\ResourceStore.cs:line 134
+   at Hl7.Fhir.Publication.Specification.Profile.Binding.GetLink(ResourceStore resourceStore, String packageName) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Binding.cs:line 37
+   at Hl7.Fhir.Publication.Specification.Profile.Bindings.Formatter.get_Reference() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Bindings\Formatter.cs:line 24
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Description.BindingFormatter.GetFormattedBinding() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Description\BindingFormatter.cs:line 65
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Description.Formatter.AddDefinitionValues() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Description\Formatter.cs:line 125
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Description.Formatter..ctor(ElementDefinition element, ElementDefinition fallback, ResourceStore resourceStore, String package) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Description\Formatter.cs:line 47
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Rows.Row.get_Description() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Rows\Row.cs:line 63
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Rows.ElementRow.get_Value() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Rows\ElementRow.cs:line 54
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.CreateRow(ElementDefinition elementDefinition, StructureDefinition profile, Boolean showMissing, ICollection`1 rows, ElementNavigator navigator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 227
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.GetElementRow(ICollection`1 rows, ElementNavigator navigator, StructureDefinition profile, Boolean showMissing) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 116
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.CreateRow(ElementDefinition elementDefinition, StructureDefinition profile, Boolean showMissing, ICollection`1 rows, ElementNavigator navigator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 238
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.GetElementRow(ICollection`1 rows, ElementNavigator navigator, StructureDefinition profile, Boolean showMissing) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 116
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.CreateRow(ElementDefinition elementDefinition, StructureDefinition profile, Boolean showMissing, ICollection`1 rows, ElementNavigator navigator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 238
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.GetElementRow(ICollection`1 rows, ElementNavigator navigator, StructureDefinition profile, Boolean showMissing) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 116
+   at Hl7.Fhir.Publication.Specification.Profile.Structure.Factory.GenerateStructure(StructureDefinition structure, Boolean isDifferential) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Specification\Profile\Structure\Factory.cs:line 92
+   at Hl7.Fhir.Publication.Processors.Profile.StructureProcessor.CreateStructureDefinitionPage(ResourceComponent resource) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\Profile\StructureProcessor.cs:line 113
+   at Hl7.Fhir.Publication.Processors.Profile.StructureProcessor.CreatePagesInPackage() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\Profile\StructureProcessor.cs:line 91
+   at Hl7.Fhir.Publication.Processors.Profile.StructureProcessor.Process(Document input, Stage output, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Processors\Profile\StructureProcessor.cs:line 63
+   at Hl7.Fhir.Publication.Framework.Processor.Process(IProcessor processor, Stage input, Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 16
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, Stage input, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Processor.Process(PipeLine pipeline, ISelector filter, Log log, IDirectoryCreator fileCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Processor.cs:line 38
+   at Hl7.Fhir.Publication.Framework.Statement.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Statement.cs:line 31
+   at Hl7.Fhir.Publication.Framework.Make.Bulk.Execute(Log log, IDirectoryCreator directoryCreator) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Make\Bulk.cs:line 25
+   at Hl7.Fhir.Publication.Framework.Publisher.Publish() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Publisher.cs:line 80 
+ InnerException: 

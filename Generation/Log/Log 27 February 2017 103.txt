@@ -1,0 +1,14 @@
+
+***Furnace log date run: 27 February 2017 103 ***
+Furnace: Fhir publisher tool version: 2.7.6256.31052
+***Starting generation***
+Source directory: C:\git\NHS-FHIR-DDS\Generation 
+ Target Directory: C:\git\NHS-FHIR-DDS\Generated
+Clear down Generated folder
+**Error** 
+ Message:  key: SCHEMAS is not found in the config store! 
+ Stacktrace:    at Hl7.Fhir.Publication.Framework.Config.Store.GetConfigValue(KeyType key, Dictionary`2 configValues) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Config\Store.cs:line 49
+   at Hl7.Fhir.Publication.Framework.Directory.Formatter.get_IsSchemaRequired() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Directory\Formatter.cs:line 43
+   at Hl7.Fhir.Publication.Framework.Directory.Formatter.FormatOutputDirectory() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Directory\Formatter.cs:line 51
+   at Hl7.Fhir.Publication.Framework.Publisher.Publish() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Publisher.cs:line 73 
+ InnerException: 

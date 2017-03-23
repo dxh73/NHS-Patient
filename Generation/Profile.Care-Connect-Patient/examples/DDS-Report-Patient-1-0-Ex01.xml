@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--Sample male patient-->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schemas/patient.xsd">
+	<id value="B2D4B85D-AC24-4E9C-A368-588C3F34F570"/>
+	<!--Identifies the profile being used-->
+	<meta>
+		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
+	</meta>
+	<!--Primary patient identifier i.e. NHS number and code to indicate its been verified-->
+	<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="http://fhir.nhs.net/ValueSet/nhs-number-status-indicator-1-0"/>
+				<code value="01"/>
+				<display value="Number present and verified"/>
+			</coding>
+		</type>
+		<system value="http://fhir.nhs.net/Id/nhs-number"/>
+		<value value="9900000276"/>
+	</identifier>
+	<identifier>
+		<use value="temp"/>
+		<system value="http://mmc.nhs.uk/Id/local-person-identifier"/>
+		<value value="MMC788888"/>
+		<assigner>
+			<reference value="Organization/78D64BB3-B5B2-450B-AEB7-D9035EBC711D"/>
+			<display value="MGP Medical Centre"/>
+		</assigner>
+	</identifier>
+	<!--Whether this patient's record is in active use-->
+	<active value="true"/>
+	<name>
+		<use value="official"/>
+		<text value="William Arthur Smith"/>
+		<family value="Smith"/>
+		<given value="William"/>
+		<given value="Arthur"/>
+		<prefix value="Mr"/>
+	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="01254783568"/>
+		<use value="home"/>
+		<!--Specifies preferred order of use of the phone number (1 = highest)-->
+		<rank value="1"/>
+	</telecom>
+	<gender value="male"/>
+	<birthDate value="1956-05-15"/>
+	<!--Flag to indicate this patient is not deceased-->
+	<deceasedBoolean value="false"/>
+	<address>
+		<use value="home"/>
+		<!-- Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes) Most addresses are both.-->
+		<type value="both"/>
+		<!-- Unstructured address-->
+		<text value="1a Muirfield Crescent, Sampletown, West Yorkshire, LS20 1BB"/>
+		<!-- Structured address-->
+		<line value="1a Muirfield Crescent"/>
+		<city value="Sampletown"/>
+		<district value="West Yorkshire"/>
+		<postalCode value="LS20 1BB"/>
+		<country value="United Kingdom"/>
+	</address>
+	<maritalStatus>
+		<coding>
+			<system value="http://hl7.org/fhir/valueset-marital-status.html"/>
+			<code value="M"/>
+			<display value="Married/Civil Partner"/>
+			<!-- If this coding was chosen directly by the user -->
+			<userSelected value="true"/>
+		</coding>
+		<text/>
+	</maritalStatus>
+	<multipleBirthInteger value="1"/>
+	<!-- Patients NOK contact -->
+	<contact>
+		<relationship>
+			<coding>
+				<system value="http://fhir.nhs.net/ValueSet/cda-person-relationship-type-1-0"/>
+				<code value="01"/>
+				<display value="Spouse"/>
+				<!-- If this coding was chosen directly by the user -->
+				<userSelected value="true"/>
+			</coding>
+			<text/>
+		</relationship>
+		<name>
+			<use value="official"/>
+			<text value="Margaret Kate Smith"/>
+			<family value="Smith"/>
+			<given value="Margaret Kate"/>
+			<prefix value="Mrs"/>
+		</name>
+		<telecom>
+			<system value="phone"/>
+			<value value="01254783568"/>
+			<use value="home"/>
+			<!--Specifies preferred order of use of the phone number (1 = highest)-->
+			<rank value="1"/>
+		</telecom>
+		<address>
+			<use value="home"/>
+			<type value="both"/>
+			<line value="1a Muirfield Crescent"/>
+			<city value="Sampletown"/>
+			<district value="West Yorkshire"/>
+			<postalCode value="LS20 1BB"/>
+			<country value="United Kingdom"/>
+		</address>
+		<gender value="female"/>
+	</contact>
+	<communication>
+		<!--The patient's preferred language-->
+		<language>
+			<coding>
+				<system value="http://fhir.nhs.net/ValueSet/human-language-1-0.html"/>
+				<code value="en"/>
+				<display value="English"/>
+				<userSelected value="true"/>
+			</coding>
+		</language>
+		<preferred value="true"/>
+	</communication>
+	<careProvider>
+		<!-- A reference to the patient’s care provider (GP) details elsewhere in the message-->
+		<reference value="Practitioner/4BFCA0EF-85D0-4C5E-B662-D4910BB83D82"/>
+		<display value="Dr. Jones"/>
+	</careProvider>
+	<careProvider>
+		<!-- A reference to the patient’s care provider (Organisation) details elsewhere in the message-->
+		<reference value="Organization/78D64BB3-B5B2-450B-AEB7-D9035EBC711D"/>
+		<display value="MGP Medical Centre"/>
+	</careProvider>
+</Patient>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--This example shows a Cervical smear specimen.-->
+<Specimen xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schemas/specimen.xsd">
+	<id value="de756619-4db4-4c51-9ffb-9ddc8682c96"/>
+	<meta>
+		<!--Identifies the profile being used-->
+		<profile value="http://fhir.nhs.net/StructureDefinition/dds-report-specimen-1-0"/>
+	</meta>
+	<identifier>
+		<use value="official"/>
+		<system value="http://mgp.nhs.uk/id/specimen-id"/>
+		<!-- Unique identifier of the specimen assigned by requester - UUID is used as an example only -->
+		<value value="ddd1f740-9cab-4f2c-a34b-c18e92f377ca"/>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/78d64bb3-b5b2-450b-aeb7-d9035ebc711d"/>
+			<display value="MGP Medical Centre"/>
+		</assigner>
+	</identifier>
+	<!-- The specimen type - review use of FHIR valueset at http://www.hl7.org/fhir/v2/0487/index.html; use SNOMED values for now.-->
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="276446009"/>
+			<display value="Cervical smear sample"/>
+		</coding>
+	</type>
+	<subject>
+		<!-- Reference to the patient profile carried elsewhere in the message-->
+		<reference value="Patient/9a66024b-0546-4088-b20e-dff3c2c00fce"/>
+		<display value="Chrystal Jones"/>
+	</subject>
+	<accessionIdentifier>
+		<system value="http://www.sampleth.nhs.uk/pathology/cytologyservices/labno"/>
+		<!-- Identifier assigned by the lab-->
+		<value value="CS8667800001"/>
+		<period>
+			<start value="2016-04-04T09:16:00+01:00"/>
+		</period>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/223f5c66-66bf-4cea-a5d7-25ab9348b448"/>
+		</assigner>
+	</accessionIdentifier>
+	<receivedTime value="2016-04-04T09:20:00+01:00"/>
+	<collection>
+		<!-- This is reference to the practitioner profile elsewhere in the message -->
+		<collector>
+			<reference value="Practitioner/4bfca0ef-85d0-4c5e-b662-d4910bb83d82"/>
+			<display value="Dr. Jones"/>
+		</collector>
+		<!-- Quantity collected. Need to understand if this applies to this type of specimen-->
+		<quantity>
+		</quantity>
+		<!--Method of specimen collection using SNOMEDCT codes-->
+		<method>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="839611000000107"/>
+				<display value="Collection of specimen by smear"/>
+			</coding>
+		</method>
+		<bodySite>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="71252005"/>
+				<display value="Cervix"/>
+			</coding>
+		</bodySite>
+	</collection>
+	<!-- This is data relating to the processing of and procedures performed on the specimen. -->
+	<treatment>
+		<procedure>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value=" 446914005"/>
+				<display value="Preparation and staining of smear using Papanicolaou technique"/>
+			</coding>
+		</procedure>
+	</treatment>
+	<treatment>
+		<procedure>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="700152009"/>
+				<display value="Human papilloma virus screening"/>
+			</coding>
+		</procedure>
+	</treatment>
+	<!-- Description of the container of the specimen. -->
+	<container>
+		<identifier>
+			<system value="http://mmp.nhs.uk/id/container-id"/>
+			<value value="678e680b-2d32-4a7a-85a1-cc79d57d4142"/>
+			<assigner>
+				<!-- This can be a reference to the profile elsewhere in the message or just text -->
+				<reference value="Organisation/78d64bb3-b5b2-450b-aeb7-d9035ebc711d"/>
+				<display value="MGP Medical Centre"/>
+			</assigner>
+		</identifier>
+		<type>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="434746001"/>
+				<display value="Specimen vial"/>
+			</coding>
+		</type>
+		<capacity>
+			<value value="10"/>
+			<unit value="mL"/>
+			<system value="http://unitsofmeasure.org"/>
+		</capacity>
+	</container>
+</Specimen>

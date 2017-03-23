@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. 
+Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--This example shows a Diagnostic report for Hepatitis B antigen screening-->
+<DiagnosticReport xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir  ../../Schemas/diagnosticreport.xsd">
+	<id value="50ba1013-55f8-4740-880e-1fbb9b4aa125"/>
+	<!--Identifies the profile being used-->
+	<meta>
+		<profile value="http://fhir.nhs.net/StructureDefinition/dds-report-1-0"/>
+	</meta>
+	<identifier>
+		<use value="official"/>
+		<!-- The report identifier issued by the organisation -->
+		<system value="http://www.sampleth.nhs.uk/pathology/report-identifier"/>
+		<value value="STHTPATH89000000003"/>
+		<!-- This can be a reference to the profile elsewhere in the message or just text -->
+		<assigner>
+			<reference value="Organization/223f5c66-66bf-4cea-a5d7-25ab9348b448"/>
+			<display value="Sampletown Teaching Hospitals, Pathology Services"/>
+		</assigner>
+	</identifier>
+	<!-- Indicates this is a final report-->
+	<status value="final"/>
+	<category>
+		<!-- A code(s) that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This may be used for searching, sorting and display purposes.-->
+		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections"/>
+			<code value="MB"/>
+			<display value="Microbiology"/>
+		</coding>
+	</category>
+	<!--SnomedCT code showing the name for the report. Need to consult Subject matter experts for appropriateness-->
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="1028341000000105"/>
+			<display value="Hepatitis B antigen screening"/>
+		</coding>
+	</code>
+	<subject>
+		<!-- This is reference to the patient profile elsewhere in the message -->
+		<reference value="Patient/b2d4b85d-ac24-4e9c-a368-588c3f34f570"/>
+		<display value="William Arthur Smith"/>
+	</subject>
+	<effectiveDateTime value="2013-04-15T03:45:00+01:00"/>
+	<issued value="2013-04-15T10:28:00+01:00"/>
+	<performer>
+		<!-- This is a reference to the organisation or practitioner responsible for issuing the report. -->
+		<reference value="Practitioner/4bfca0ef-85d0-4c5e-b662-d4910bb83d82"/>
+	</performer>
+	<request>
+		<!-- Request identifier -->
+		<display value="D4910BB83D82"/>
+	</request>
+	<!-- This is a reference to the specimen elsewhere in the message. -->
+	<specimen>
+		<reference value="Specimen/b603cede-8c3f-4909-9cb1-d47c0fde9f8a"/>
+	</specimen>
+	<result>
+		<!--Reference to the relevant observation-->
+		<reference value="Observation/f1349f62-d2cc-4384-a86e-abd2a654c571"/>
+		<display value="Results for Hepatitis B antigen screening"/>
+	</result>
+	<conclusion value="Immune to Hepatitis B. Immunity due to vaccination."/>
+	<!--FHIR valueset mapping to SNOMEDCT clinical finding code showing the conclusion of the report.-->
+	<codedDiagnosis>
+		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/clinical-findings"/>
+			<code value="271511000"/>
+			<display value="Hepatitis B immune"/>
+		</coding>
+	</codedDiagnosis>
+	<presentedForm>
+		<contentType value="text/plain; charset=UTF-8, image/png"/>
+		<language value="English"/>
+		<url value="http://www.sampleth.nhs.uk/pathology/logo-small.png"/>
+	</presentedForm>
+</DiagnosticReport>

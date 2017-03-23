@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence.-->
+<!--This is an example for a full blood count.-->
+<!--Version 1.1 14/06/2016
+Added in LOINC codes.
+-->
+<Observation xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir  ../../Schemas/observation.xsd">
+	<!--The id for this entity-->
+	<id value="1A2ABF38-02EC-471E-BB47-7929F853321A"/>
+	<!--Identifies the profile being used-->
+	<meta>
+		<profile value="http://fhir.nhs.net/StructureDefinition/dds-report-observation-1-0"/>
+	</meta>
+	<identifier>
+		<use value="official"/>
+		<system value="http://www.sampleth.nhs.uk/pathology/bloodsciences/labno"/>
+		<value value="HAEM8667800009"/>
+		<assigner>
+			<!-- This can be a reference to the profile elsewhere in the message or just text -->
+			<reference value="Organization/223F5C66-66BF-4CEA-A5D7-25AB9348B448"/>
+		</assigner>
+	</identifier>
+	<status value="final"/>
+	<category>
+		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/observation-category"/>
+			<code value="laboratory"/>
+			<display value="Laboratory"/>
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="1022441000000101"/>
+			<display value="Full blood count"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/B2D4B85D-AC24-4E9C-A368-588C3F34F570"/>
+		<display value="William Arthur Smith"/>
+	</subject>
+	<effectiveDateTime value="2016-05-17T15:30:10+01:00"/>
+	<issued value="2016-05-16T15:30:10+01:00"/>
+	<!--Would it be appropriate for a FBC observation to have a value here e.g. only one result?-->
+	<valueString value="All test results within normal ranges."/>
+	<interpretation>
+		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+			<code value="N"/>
+			<display value="Normal"/>
+		</coding>
+	</interpretation>
+	<comments value="Platelets are clumped, but appear adequate in number. Red cells are mainly normocytic normochromic with mild rouleaux. White cells appear normal."/>
+	<bodySite>
+		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/body-site"/>
+			<code value="308046002"/>
+			<display value="Structure of superficial forearm vein"/>
+		</coding>
+	</bodySite>
+	<!--Subject matter experts to be consulted on appropriate SNOMED code.-->
+	<method>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="To be decided"/>
+			<display value="To be decided"/>
+		</coding>
+	</method>
+	<specimen>
+		<reference value="Specimen/B603CEDE-8C3F-4909-9CB1-D47C0FDE9F8A"/>
+	</specimen>
+	<component>
+		<code>
+			<!--Subject matter experts to be consulted on appropriate LOINC code.-->
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="718-7"/>
+				<display value="Haemoglobin [Mass/​volume] in Blood"/>
+			</coding>
+			<text value="Haemoglobin"/>
+		</code>
+		<!--Value quantities for components is ucum for the individual test results-->
+		<valueQuantity>
+			<value value="129"/>
+			<unit value="Grammes per Litre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="g/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="115"/>
+				<unit value="Grammes per Litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="g/L"/>
+			</low>
+			<high>
+				<value value="150"/>
+				<unit value="Grammes per Litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="g/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<!--Subject matter experts to be consulted on appropriate LOINC code.-->
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="26464-8"/>
+				<display value="Leukocytes [#/vol] in Blood"/>
+			</coding>
+			<text value="WCC"/>
+		</code>
+		<valueQuantity>
+			<value value="8.6"/>
+			<unit value="x10^9/L"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="x10^9/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="4.0"/>
+				<unit value="x10^9/L"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="x10^9/L"/>
+			</low>
+			<high>
+				<value value="11.0"/>
+				<unit value="x10^9/L"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="x10^9/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<!--Consult subject matter experts to verify appropriate LOINC code.-->
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="26515-7"/>
+				<display value="Platelets [#/vol] in Blood"/>
+			</coding>
+			<text value="Platelets"/>
+		</code>
+		<valueQuantity>
+			<value value="213"/>
+			<unit value="x10^9/L"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="x10^9/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="140"/>
+				<unit value="x10^9/L"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="x10^9/L"/>
+			</low>
+			<high>
+				<value value="400"/>
+				<unit value="x10^9/L"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="x10^9/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<!--Consult subject matter experts to verify appropriate LOINC code to be determined.-->
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="To be determined"/>
+				<display value="Mean corpuscular volume (MCV) of red blood cells."/>
+			</coding>
+			<text value="MCV"/>
+		</code>
+		<valueQuantity>
+			<value value="86"/>
+			<unit value="femtolitre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="fL"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="80"/>
+				<unit value="femtolitre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="fL"/>
+			</low>
+			<high>
+				<value value="96"/>
+				<unit value="femtolitre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="fL"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<!--Consult subject matter experts to verify appropriate LOINC code.-->
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="71833-8"/>
+				<display value="Haematocrit [Pure vol fraction] of Blood"/>
+			</coding>
+			<text value="Haematocrit"/>
+		</code>
+		<valueQuantity>
+			<value value="0.38"/>
+			<unit value="litre per litre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="L/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="0.35"/>
+				<unit value="litre per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="L/L"/>
+			</low>
+			<high>
+				<value value="0.45"/>
+				<unit value="litre per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="L/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="26453-1"/>
+				<display value="RBCs [#/vol] in Blood"/>
+			</coding>
+			<text value="RBCs"/>
+		</code>
+		<valueQuantity>
+			<value value="4.42"/>
+			<unit value="x10^12/L"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="x10^12/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="3.80"/>
+				<unit value="x10^12/L"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="x10^12/L"/>
+			</low>
+			<high>
+				<value value="5.10"/>
+				<unit value="x10^12/L"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="x10^12/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<!--Consult subject matter experts to verify appropriate LOINC code.-->
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="28539-5"/>
+				<display value="RBC mean corpuscular hemoglobin [Entitic mass]"/>
+			</coding>
+			<text value="Mean cell Hb volume"/>
+		</code>
+		<valueQuantity>
+			<value value="29.3"/>
+			<unit value="picogram"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="pg"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="27.0"/>
+				<unit value="picogram"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="pg"/>
+			</low>
+			<high>
+				<value value="33.0"/>
+				<unit value="picogram"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="pg"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<!--Consult subject matter experts to verify appropriate LOINC code.-->
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="28540-3"/>
+				<display value="RBC mean corpuscular hemoglobin concentration [Mass/vol]"/>
+			</coding>
+			<text value="Mean cell Hb conc"/>
+		</code>
+		<valueQuantity>
+			<value value="341"/>
+			<unit value="Grammes per Litre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="g/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="320"/>
+				<unit value="Grammes per Litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="g/L"/>
+			</low>
+			<high>
+				<value value="360"/>
+				<unit value="Grammes per Litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="g/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<!--Consult subject matter experts to verify appropriate LOINC code.-->
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="30385-9"/>
+				<display value="RBC distribution width [Ratio]"/>
+			</coding>
+			<text value="RBC distribution width"/>
+		</code>
+		<valueQuantity>
+			<value value="14.0"/>
+			<unit value="percent"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="%"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="11.0"/>
+				<unit value="percent"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="%"/>
+			</low>
+			<high>
+				<value value="15.0"/>
+				<unit value="percent"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="%"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="26499-4"/>
+				<display value="Neutrophils [#/vol] in Blood"/>
+			</coding>
+			<text value="Neutrophils"/>
+		</code>
+		<valueQuantity>
+			<value value="6.2"/>
+			<unit value="billion per litre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="10*9/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="2.0"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</low>
+			<high>
+				<value value="8.0"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="26474-7"/>
+				<display value="Lymphocytes [#/vol] in Blood"/>
+			</coding>
+			<text value="Lymphocytes"/>
+		</code>
+		<valueQuantity>
+			<value value="1.5"/>
+			<unit value="billion per litre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="10*9/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="1.2"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</low>
+			<high>
+				<value value="4.0"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="26484-6"/>
+				<display value="Monocytes [#/vol] in Blood"/>
+			</coding>
+			<text value="Monocytes"/>
+		</code>
+		<valueQuantity>
+			<value value="0.8"/>
+			<unit value="billion per litre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="10*9/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="0.1"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</low>
+			<high>
+				<value value="1.0"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="26449-9"/>
+				<display value="Eosinophils [#/vol] in Blood"/>
+			</coding>
+			<text value="Eosinophils"/>
+		</code>
+		<valueQuantity>
+			<value value="0.0"/>
+			<unit value="billion per litre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="10*9/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="0.0"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</low>
+			<high>
+				<value value="0.5"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</high>
+		</referenceRange>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+				<code value="26444-0"/>
+				<display value="Basophils [#/volume] in Blood"/>
+			</coding>
+			<text value="Basophils"/>
+		</code>
+		<valueQuantity>
+			<value value="0.1"/>
+			<unit value="billion per litre"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="10*9/L"/>
+		</valueQuantity>
+		<referenceRange>
+			<low>
+				<value value="0.0"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</low>
+			<high>
+				<value value="0.1"/>
+				<unit value="billion per litre"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="10*9/L"/>
+			</high>
+		</referenceRange>
+	</component>
+</Observation>

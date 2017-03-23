@@ -1,0 +1,13 @@
+
+***Furnace log date run: 27 February 2017 1016 ***
+Furnace: Fhir publisher tool version: 2.7.6256.31052
+***Starting generation***
+Source directory: C:\git\NHS-FHIR-DDS\Generation 
+ Target Directory: C:\git\NHS-FHIR-DDS\Generated
+Clear down Generated folder
+**Error** 
+ Message:  Config File is missing. It should be here : C:\git\NHS-FHIR-DDS\Generation\config.json 
+ Stacktrace:    at Hl7.Fhir.Publication.Framework.Config.Store.GetConfigStore(Context context) in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Config\Store.cs:line 28
+   at Hl7.Fhir.Publication.Framework.Directory.Formatter.FormatOutputDirectory() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Directory\Formatter.cs:line 49
+   at Hl7.Fhir.Publication.Framework.Publisher.Publish() in C:\Users\rmk\Source\Repos\FHIRGEN-DSTU2\Fhir.Publication\Framework\Publisher.cs:line 73 
+ InnerException: 

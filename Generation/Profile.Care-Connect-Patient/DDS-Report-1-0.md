@@ -1,0 +1,3 @@
+The Diagnostic Report (result) resource describes the findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations and/or specimens derived from these.
+A diagnostic report is the set of information that is typically provided by a diagnostic service when investigations are complete. The information can include a mix of atomic results, text reports, images, and codes.
+Report conclusions can be expressed as a simple text blob, structured coded data or as an attached fully formatted report such as a PDF.
