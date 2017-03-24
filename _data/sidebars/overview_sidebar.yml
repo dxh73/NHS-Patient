@@ -1,6 +1,6 @@
 entries:
-- title: FHIR Patient Profile
-  product: FHIR Patient Profile<br/>
+- title: DDS - Care Connect Patient Profile
+  product: Care Connect Patient Profile<br/>
   version: Draft A 1.0
   levels: one
   folders:
@@ -8,13 +8,10 @@ entries:
   - title: Overview
     output: web
     folderitems:
-    - title: About
+    - title: Introduction
       url: /index.html
       output: web, pdf
       type: homepage
-    - title: Workshops
-      url: /overview_workshops.html
-      output: web
     - title: Glossary
       url: /overview_glossary.html
       output: web
@@ -22,7 +19,7 @@ entries:
   - title: Explore
     output: web
     folderitems:
-    - title: Overview
+    - title: 
       url: /explore_overview.html
       output: web
 
@@ -47,11 +44,11 @@ entries:
       url: /assure_overview.html
       output: web
 
-  - title: Deploy
+  - title: Examples
     output: web
     folderitems:
-    - title: Overview
-      url: /deploy_overview.html
+    - title: Care Connect Examples
+      url: /examples_overview.html
       output: web
 
   - title: Communications

@@ -9,10 +9,10 @@ topnav_dropdowns:
   folders:
     - title: External Links
       folderitems:        
-        - title: External Link 1
-          external_url: http://www.google.com/
-        - title: External Link 2
-          external_url: http://www.yahoo.com/        
+        - title: FHIR
+          external_url: http://www.hl7.org/fhir
+        - title: INTEROpen
+          external_url: http://http://www.interopen.org/     
     - title: Capability Packs
       folderitems:
         - title: Capability One
