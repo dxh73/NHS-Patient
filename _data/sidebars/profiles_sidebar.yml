@@ -1,0 +1,17 @@
+entries:
+- title: Profiles
+  product: Pack Profiles<br/>
+  version: Draft A 1.0
+  levels: one
+  folders:
+
+  - title: Patient
+    output: web
+    folderitems:
+    - title: Elements
+      url: /elements_overview.html
+      output: web 
+              
+    - title: Data Models
+      url: /pat_data_models.html
+      output: web

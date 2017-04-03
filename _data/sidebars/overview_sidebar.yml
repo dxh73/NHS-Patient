@@ -16,51 +16,41 @@ entries:
       url: /overview_glossary.html
       output: web
 
-  - title: Explore
-    output: web
-    folderitems:
-    - title: 
-      url: /explore_overview.html
-      output: web
-
-  - title: Develop
+  - title: Profiles
     output: web
     folderitems:
     - title: Overview
-      url: /develop_overview.html
+      url: /profiles_overview.html
       output: web
 
-  - title: Capabilities
-    output: web
-    folderitems:
-    - title: Capability One
-      url: /capability_one.html
-      output: web
-
-  - title: Assure
+  - title: System Architecture
     output: web
     folderitems:
     - title: Overview
-      url: /assure_overview.html
+      url: /architecture.html
+      output: web
+      
+  - title: History
+    output: web
+    folderitems:
+    - title: Overview
+      url: /history.html
       output: web
 
-  - title: Examples
+  - title: Case Studies
+    output: web
+    folderitems:
+    - title: Overview
+      url: /casestudies.html
+      output: web
+      
+  - title: Example
     output: web
     folderitems:
     - title: Care Connect Examples
       url: /examples_overview.html
       output: web
-
-  - title: Communications
-    output: web
-    folderitems:    
-    - title: Overview
-      url: /communications_overview.html
-      output: web
-    - title: Frequently Asked Questions (FAQ)
-      url: /communications_faq.html
-      output: web
-
+     
   - title: Tags
     output: web
     folderitems:

@@ -1,0 +1,24 @@
+entries:
+- title: Elements  
+  product: Profile elements<br/>
+  version: Draft A 1.0
+  levels: one
+  folders:
+
+  - title: Elements
+    output: web
+    folderitems:
+    - title: id
+      url: /id.html
+      output: web
+    - title: name
+      url: /id.html
+      output: web
+    - title: address
+      url: /id.html
+      output: web
+    - title: Date of Birth
+      url: /id.html
+      output: web
+      
+

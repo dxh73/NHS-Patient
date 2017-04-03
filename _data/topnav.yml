@@ -13,7 +13,8 @@ topnav_dropdowns:
           external_url: http://www.hl7.org/fhir
         - title: INTEROpen
           external_url: http://http://www.interopen.org/     
-    - title: Capability Packs
-      folderitems:
-        - title: Capability One
-          url: capability_one.html
+    - title: Community
+      folderitems:        
+        - title: Zulip
+          external_url: http://www.zulip.com
+
