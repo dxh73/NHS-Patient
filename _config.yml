@@ -23,9 +23,9 @@ github_editme_path: /edit/master/
 #tiny_letter: true
 #tiny_letter_username: tiny_letter_username
 
-#twitter: true
-#twitter_username: twitter_username
-#twitter_site_hashtags: twitter_site_hashtags
+twitter: true
+twitter_username: DDSCareConnect
+twitter_site_hashtags: Care Connect DDS
 
 host: 127.0.0.1
 # the preview server used. Leave as is.
@@ -89,7 +89,8 @@ defaults:
 
 sidebars:
 - overview_sidebar
-- capability_one_sidebar
+- profiles_sidebar
+- elements_sidebar
 
 description: "Description of the site."
 # the description is used in the feed.xml file

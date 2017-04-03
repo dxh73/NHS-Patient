@@ -7,9 +7,11 @@ permalink: architecture.html
 summary: An overview of the development tools / code examples available to help develop provider and consumder systems.
 ---
 
-## System Design ##
+## Interactions ##
 
 Overview of any design-time resources that are available.
+
+![Interactions](images/architecture/DiagnosticDataServicesInteractions.png)
 
 ## System Implementation ##
 

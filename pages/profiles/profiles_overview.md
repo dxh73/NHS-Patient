@@ -1,5 +1,5 @@
 ---
-title: Profiles
+title: Profiles found in this pack
 keywords: explore, design, reference
 tags: [design,explore]
 sidebar: profiles_sidebar
@@ -7,9 +7,17 @@ permalink: profiles_overview.html
 summary: An overview of the profiles associated with this FHIR Implementation Pack.
 ---
 
-## Placeholder 1
+## Patient Profile ##
+
+The patient profile is used by the Data Diagnostic Service to capture the following patient details for use within the service:
+
+- Patients NHS Number (ID)
+- Patient Name
+- Primary address
+- Date of Birth
+- Patients Gender
+
+Other elements found within the Care Connect Patient Profile are not required as part of this phase of the implementation, but may be used in a future release.
 
 
-
-## Placeholder 2
-
+{% include twitterfollow.html %}
