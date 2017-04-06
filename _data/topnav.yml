@@ -12,9 +12,9 @@ topnav_dropdowns:
         - title: FHIR
           external_url: http://www.hl7.org/fhir
         - title: INTEROpen
-          external_url: http://http://www.interopen.org/     
+          external_url: http://www.interopen.org/     
     - title: Community
       folderitems:        
         - title: Zulip
-          external_url: http://www.zulip.com
+          external_url: https://chat.fhir.org/login/
 

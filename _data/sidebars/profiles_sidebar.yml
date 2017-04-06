@@ -1,6 +1,6 @@
 entries:
-- title: Profiles
-  product: Pack Profiles<br/>
+- title: Care Connect Patient Profile
+  product: Care Connect Patient Profile<br/>
   version: Draft A 1.0
   levels: one
   folders:
@@ -11,7 +11,9 @@ entries:
     - title: Elements
       url: /elements_overview.html
       output: web 
-              
+    - title: Source Code
+      url: /source.html
+      output: web          
     - title: Data Models
       url: /pat_data_models.html
       output: web
