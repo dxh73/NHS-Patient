@@ -1,12 +1,12 @@
 ---
-title: id Element
+title: Identifier Element
 keywords: id, patient
 tags: [profile,element,id]
-sidebar: elements_sidebar
-permalink: id.html
+sidebar: profiles_sidebar
+permalink: identifier.html
 summary: "low level details for the care connect patient 'id' element"
 ---
-{% include important.html content="The id element described is not the id that identifies a patient. It is the id for the FHIR message" %}
+{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
 
 ## Identifier Implementation Guide ##
 
@@ -16,6 +16,10 @@ This specification describes a single use case.
 
 ### Element Usage ###
 
+Care Connect uses the Patient.Identifier element and creates two independent sliced elements that can capture a patients identifier as either a national identifier (NHS Number) or an alternative local identifier.
+
+### NHS Number Identifier ###
+
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
 | Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
@@ -24,7 +28,9 @@ This specification describes a single use case.
 
 - 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically located in England, Wales or Northern Ireland.
 - The NHS number **MUST** consist of a 10 digit numeric value.
-- A local identifier **MAY** be used in addition to the NHS number.
+- The namespace for the `nhsNumber` MUST be defined as http://fhir.nhs.net/Id/nhs-number
+- The `nhsNumber` MUST be stored as a string value
+- - A local identifier **MAY** be used in addition to the NHS number.
 
 ### NHS Number Verification Status ###
 
@@ -56,7 +62,7 @@ NHS Status Indicator Codes
 |07|Number not present and trace not required|
 |08|Trace postponed (baby under six weeks old)|
 
-On the wire example in XML
+On the wire XML example
 
 ```xml
 <identifier>
@@ -77,9 +83,23 @@ On the wire example in XML
 On the wire example in JSON
 
 ```json
-TODO
+{
+  "identifier": {
+    "extension": {
+      "-url": "http://hl7.org.uk/fhir/CareConnect-NhsNumberVerificationStatus-1-Extension",
+      "valueCodeableConcept": {
+        "coding": {
+          "system": { "-value": "http://hl7.org.uk/fhir/ValueSet/CareConnect-NhsNumberVerificationStatus" },
+          "code": { "-value": "01" },
+          "display": { "-value": "Number present and verified" }
+        }
+      }
+    },
+    "system": { "-value": "https://fhir.nhs.uk/Id/nhs-number" },
+    "value": { "-value": "1352465790" }
+  }
+}
 ```
-
 
 *Error Handling*
 
@@ -88,9 +108,50 @@ The provider system SHALL return an error if:
 - the `nhsNumber` is invalid (i.e. fails NHS Number format and check digit tests).
 - the `nhsNumber` is not associated with a NHS Number Status Indicator Code
 
+### Other Identifiers ###
+
+Provider systems MAY use alternative patient identifiers in addition to the `nhsNumber` sliced element. 
+
+|Type|name|Data Type|Description|
+| ------------- | ------------- | ------------- | ------------- |
+| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
+|Complex| identifier#2 [other]|Identifier| Alternative identifers for a NHS patient.|
 
 
+- `other` **MUST NOT** be used in place of an NHS Number
+- Providers **MAY** uses multiple local identifiers where it is appropreiate
+- Providers **MAY** use `other` in addition to nhsNumber`
+- The namespace for the `other` MUST be populated when identifier is used
+- The `other` MUST be a populated string value
 
+On the wire XML example
+
+```xml
+<identifier>
+	<system value="http://fhir.nhs.uk/Id/local-identifier"/>
+		<value value="MRT12345"/>
+</identifier>
+```
+
+```json
+{
+  "identifier": {
+    "system": { "-value": "http://fhir.nhs.uk/Id/local-identifier" },
+    "value": { "-value": "MRT12345" }
+  }
+}
+```
+
+*Error Handling*
+
+The provider system SHALL return an error if:
+
+TODO
+
+## RESTful Usage ##
+
+
+Examples
 
 
 

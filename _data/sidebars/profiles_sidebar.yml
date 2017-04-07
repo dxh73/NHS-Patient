@@ -9,7 +9,7 @@ entries:
     output: web
     folderitems:
     - title: identifier
-      url: /id.html
+      url: /identifier.html
       output: web
     - title: active
       url: /active.html
@@ -24,7 +24,7 @@ entries:
       url: /gender.html
       output: web
     - title: birthDate
-      url: /birth.html
+      url: /birth_date.html
       output: web
     - title: deceased
       url: /deceased.html
@@ -63,13 +63,13 @@ entries:
           url: /birthtime.html
           output: web
         - title: ethnicCategory
-          url: /ethnic_Category.html
+          url: /ethnic_category.html
           output: web
         - title: religiousAffiliation
           url: /religious_affiliation.html
           output: web
         - title: organDonor
-          url: /organdonor.html
+          url: /organ_donor.html
           output: web
         - title: residentialStatus
           url: /resistatus.html

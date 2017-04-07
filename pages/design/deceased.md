@@ -3,7 +3,7 @@ title: Identifier Element
 keywords: id, patient
 tags: [profile,element,id]
 sidebar: profiles_sidebar
-permalink: identifier.html
+permalink: deceased.html
 summary: "low level details for the care connect patient 'id' element"
 ---
 {% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
