@@ -25,7 +25,7 @@ entries:
     - title: Product Versioning
       url: /history.html
       output: web
-
+              
   - title: Development Guidance
     output: web
     folderitems:
@@ -35,7 +35,16 @@ entries:
     - title: API Foundations
       url: /examples_overview.html
       output: web
-     
+      
+      subfolders:
+      - title: Care Connect API Guidance
+        output: web
+        subfolderitems:
+        
+        - title: Patient API
+          url: /care_connect_patient_overview.html
+          output: web
+          
   - title: System Architecture
     output: web
     folderitems:
@@ -44,8 +53,8 @@ entries:
       output: web
     - title: Demonstrator
       url: /demo.html
-      output: web
-            
+      output: web    
+      
   - title: Tags
     output: web
     folderitems:

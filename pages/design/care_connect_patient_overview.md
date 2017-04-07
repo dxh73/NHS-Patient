@@ -1,9 +1,9 @@
 ---
-title: Profiles found in this pack
+title: Care Connect Patient API
 keywords: explore, design, reference
 tags: [design,explore]
 sidebar: profiles_sidebar
-permalink: profiles_overview.html
+permalink: care_connect_patient_overview.html
 summary: An overview of the profiles associated with this FHIR Implementation Pack.
 ---
 

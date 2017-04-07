@@ -18,11 +18,12 @@ Extensions:
 | Extension | Example | ValueSets | Sample Code |
 | :--------- |:-----: |:-----: |
 | [CareConnect-EthnicCategory-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-EthnicCategory-1-Extension.extension.html) | | [CareConnect-EthnicCategory-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-EthnicCategory-1.valueset.html) |[Development Example Code - Coming Soon]
+| [Time of day of birth](http://hl7.org/fhir/StructureDefinition/patient-birthTime) | | |[Development Example Code - Coming Soon]|
 | [CareConnect-ReligiousAffiliation-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-EthnicCategory-1-Extension.extension.html) | |  [CareConnect-ReligiousAffiliation-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-ReligiousAffiliation-1.valueset.html) |[Development Example Code - Coming Soon]|
 | [CareConnect-OrganDonor-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-OrganDonor-1-Extension.extension.html) | | | [Development Example Code - Coming Soon] |
 | [CareConnect-ResidentialStatus-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-ResidentialStatus-1-Extension.extension.html) | | [CareConnect-ResidentialStatus-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-ResidentialStatus-1.valueset.html) |[Development Example Code - Coming Soon]|
 | [CareConnect-TreatmentCategory-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-TreatmentCategory-1-Extension.extension.html) | | [CareConnect-TreatmentCategory-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-TreatmentCategory-1.valueset.html)|[Development Example Code - Coming Soon]|
-| [CareConnect-NhsCommunication-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-NhsCommunication-1-Extension.extension.html) | | <br /> [CareConnect-HumanLanguage-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-HumanLanguage-1.valueset.html) <br /> [CareConnect-LanguageAbilityMode-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-LanguageAbilityMode-1.valueset.html) <br/> [CareConnect-LanguageAbilityProficiency-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-LanguageAbilityProficiency-1.valueset.html) |[Development Example Code - Coming Soon]|
+
 
 
 
@@ -30,7 +31,8 @@ Complex extension:
 
 | Extension | Example | ValueSets | Sample Code |
 | :--------- |:-----: |:-----: |
-| [CareConnect-RegistrationDetails-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-RegistrationDetails-1-Extension.extension.html) | Patient ([json](Examples/Observation.json)/[xml](Examples/Observation.xml)) | [CareConnect-EthnicCategory-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-EthnicCategory-1-Extension.extension.html) <br /> 
+| [CareConnect-RegistrationDetails-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-RegistrationDetails-1-Extension.extension.html) | Patient ([json](Examples/Observation.json)/[xml](Examples/Observation.xml)) | [CareConnect-RegistrationType-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-RegistrationType-1.valueset.html)<br/>[CareConnect-RegistrationStatus-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-RegistrationStatus-1.valueset.html)|[Development Example Code - Coming Soon]|
+| [CareConnect-NhsCommunication-1-Extension](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-NhsCommunication-1-Extension.extension.html) | | [CareConnect-HumanLanguage-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-HumanLanguage-1.valueset.html) [CareConnect-LanguageAbilityMode-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-LanguageAbilityMode-1.valueset.html) <br/> [CareConnect-LanguageAbilityProficiency-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-LanguageAbilityProficiency-1.valueset.html) |[Development Example Code - Coming Soon]|
 
 
 

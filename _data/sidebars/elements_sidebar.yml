@@ -5,11 +5,11 @@ entries:
   levels: one
   folders:
 
-  - title: Elements
+  - title: Patient Elements
     output: web
-    folderitems:
+    subfolderitems:
     - title: identifier
-      url: /id.html
+      url: /identifier.html
       output: web
     - title: active
       url: /active.html

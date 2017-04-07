@@ -1,19 +1,89 @@
 entries:
-- title: Care Connect Patient Profile
-  product: Care Connect Patient Profile<br/>
+- title: Care Connect Patient API
+  product: Care Connect Patient API<br/>
   version: Draft A 1.0
   levels: one
   folders:
 
-  - title: Patient
+  - title: Patient API
     output: web
     folderitems:
-    - title: Elements
-      url: /elements_overview.html
-      output: web 
-    - title: Source Code
-      url: /source.html
-      output: web          
-    - title: Data Models
-      url: /pat_data_models.html
+    - title: identifier
+      url: /id.html
       output: web
+    - title: active
+      url: /active.html
+      output: web
+    - title: name
+      url: /name.html
+      output: web
+    - title: telecom
+      url: /telecom.html
+      output: web
+    - title: gender
+      url: /gender.html
+      output: web
+    - title: birthDate
+      url: /birth.html
+      output: web
+    - title: deceased
+      url: /deceased.html
+      output: web
+    - title: address
+      url: /address.html
+      output: web
+    - title: maritalStatus
+      url: /marital_status.html
+      output: web
+    - title: multipleBirth
+      url: /multiple_birth.html
+      output: web
+    - title: contact
+      url: /contact.html
+      output: web
+    - title: careProvider
+      url: /care_provider.html
+      output: web
+    - title: managingOrganization
+      url: /organization.html
+      output: web
+    - title: link
+      url: /link.html
+      output: web
+      
+      subfolders:
+      - title: Extensions
+        output: web
+        subfolderitems:
+        
+        - title: registrationDetails
+          url: /registration_details.html
+          output: web
+        - title: birthTime
+          url: /birthtime.html
+          output: web
+        - title: ethnicCategory
+          url: /ethnic_Category.html
+          output: web
+        - title: religiousAffiliation
+          url: /religious_affiliation.html
+          output: web
+        - title: organDonor
+          url: /organdonor.html
+          output: web
+        - title: residentialStatus
+          url: /resistatus.html
+          output: web
+        - title: treatmentCategory
+          url: /treatment_category.html
+          output: web
+        - title: nhsCommunication
+          url: /nhs_comms.html
+          output: web
+        - title: Source Code
+          url: /source.html
+          output: web          
+        - title: Data Models
+          url: /pat_data_models.html
+          output: web
+      
