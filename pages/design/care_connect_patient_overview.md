@@ -4,20 +4,15 @@ keywords: explore, design, reference
 tags: [design,explore]
 sidebar: profiles_sidebar
 permalink: care_connect_patient_overview.html
-summary: An overview of the profiles associated with this FHIR Implementation Pack.
+summary: An overview of the parent elements/components that together form the Care Connect Patient API.
 ---
 
 ## Patient Profile ##
 
-The patient profile is used by the Data Diagnostic Service to capture the following patient details for use within the service:
+The Care Connect Patient Profile is one of the FHIR profiles that are included in the curation process by INTEROpen team members. This API is the current stable version found on the INTEROpen.org site and may differ from any other version, such as those found on the GitHub repository. As such this is the definitive version.   
 
-- Patients NHS Number (ID)
-- Patient Name
-- Primary address
-- Date of Birth
-- Patients Gender
+**Version:** 1.0
 
-Other elements found within the Care Connect Patient Profile are not required as part of this phase of the implementation, but may be used in a future release.
 
 
 {% include twitterfollow.html %}

@@ -109,3 +109,6 @@ entries:
     - title: Code Snippet
       url: /tag_code_snippet.html
       output: web
+    - title: Profile
+      url: /tag_profile.html
+      output: web
