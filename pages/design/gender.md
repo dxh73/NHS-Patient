@@ -1,13 +1,11 @@
 ---
-title: Identifier Element
-keywords: id, patient
-tags: [profile,element,id]
+title: Gender Element
+keywords: gender
+tags: [gender]
 sidebar: profiles_sidebar
 permalink: gender.html
-summary: "low level details for the care connect patient 'id' element"
+summary: "low level details for the care connect patient 'gender' element"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
-
 ## Identifier Implementation Guide ##
 
 ### Use case ###
@@ -16,62 +14,51 @@ This specification describes a single use case.
 
 ### Element Usage ###
 
-TODO
+Gender element provides an code to indicate the sex or gender of the patient to which the record belongs.
 
 ### Enter element here!!! ###
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
-
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
+| Primitive| gender| code | Patients gender used for administration purposes |
 
 
-### Enter extensions here!! ###
+- 'gender' **MUST** be populated using one of the codes within the CareConnect-AdministrativeGender-1 valueset.
+- Additional codes are not permitted.
 
 
+Gender uses the INTEROpen valueset CareConnect-AdministrativeGender-1 which **MUST** be used to identify the patients gender. No other codes are valid.
 
 ```http
-enter extensions url here!!
+http://hl7.org.uk/CareConnect-AdministrativeGender-1.valueset.xml
 ```
+|Code|Display|Definition|
+|male|Male|Male|
+|female|Female|Female|
+|other|Other|Other|
+|unknown|Unknown|Unknown|
 
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
-
-The extensions uses the following valueset:
-
-```http
-Enter valuesets here!!
-```
-Links to valuesets here!!
-
-Valueset table here if viable!!
 
 On the wire XML example
 
 ```xml
-xml example here!!
+<gender value="male"/>
 ```
 
 On the wire example in JSON
 
 ```json
-JSON example here!!
+{
+  "gender": { "-value": "male" }
+}
 ```
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-error here!!
-
-## RESTful Usage ##
-
-
-Examples
+- The value of `gender` is omitted
+- The value does not match one from the CareConnect-AdministrativeGender-1 valueset
 
 
 

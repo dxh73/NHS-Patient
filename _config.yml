@@ -51,10 +51,6 @@ feedback_disable: true
 # feedback_link: "http://helpy.io/"
 # if you uncomment the previous line, it changes where the feedback link points to
 
-name:         API News Feed
-description:  API latest updates
-url:          https://dxh73.github.io/NHS-Patient/
-
 highlighter: rouge
 # library used for syntax highlighting
 

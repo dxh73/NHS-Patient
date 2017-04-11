@@ -53,7 +53,10 @@ entries:
       output: web
     - title: Demonstrator
       url: /demo.html
-      output: web    
+      output: web
+    - title: RESTful Architecture
+      url: /restful.html
+      output: web  
       
   - title: Tags
     output: web
