@@ -1,7 +1,7 @@
 ---
-title: Identifier Element
-keywords: id, patient
-tags: [profile,element,id]
+title: Contact Element
+keywords: contact, relationship, name, telecom
+tags: [conact]
 sidebar: profiles_sidebar
 permalink: contact.html
 summary: "low level details for the care connect patient 'id' element"
@@ -16,50 +16,91 @@ This specification describes a single use case.
 
 ### Element Usage ###
 
-TODO
+The `contact` element is a backbone for additional elements that may contain their own child elements. Contact is used to capture the details for a patients preferred contact such as wife, husband or a friend. 
 
-### Enter element here!!! ###
+### Contact ###
 
-|Type|name|Data Type|Description|
+|Name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
-
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
-
-
-### Enter extensions here!! ###
+| contact| BackboneElement |Contact is an element that contains additional elements already included in the profile e.g address|
+|Elements|
+|relationship|CodeableConcept|The relationship the person has to the patient|
+|name|HumanName|The contacts name|
+|telecom|ContactPoint|A contact method and details for the person|
+|address|Address|An address for the contact person|
+|gender|code|Contacts gender|
+|organization|Reference|If the contact is an organization, a reference to that organization. The details will be captured in a different profile.|
 
 
+- If contact is used then as a minimum the `name` element **must** be populated. The same guidelines apply to this element as that used by `Patient.Name` element.
+- Where the contact is an organization, the `name` element **must** contain a contact at that organization. 
 
-```http
-enter extensions url here!!
-```
+### Valuesets ##
 
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
 
-The extensions uses the following valueset:
-
-```http
-Enter valuesets here!!
-```
-Links to valuesets here!!
-
-Valueset table here if viable!!
 
 On the wire XML example
 
 ```xml
-xml example here!!
+<contact>
+	<relationship>
+		<coding>
+			<system value="http://hl7.org.uk/fhir/ValueSet/CareConnect-PersonRelationshipType"/>
+			<code value="01"/>
+			<display value="Spouse"/>
+		</coding>
+	</relationship>
+	<name>
+		<use value="usual"/>
+		<family value="Smith"/>
+		<given value="Joy"/>
+		<prefix value="Mrs"/>
+	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="0712345678"/>
+		<use value="mobile"/>
+	</telecom>
+	<telecom>
+		<system value="email"/>
+		<value value="mrssmith@mymail.com"/>
+	</telecom>
+	<gender value="female"/>
+</contact>
 ```
 
 On the wire example in JSON
 
 ```json
-JSON example here!!
+{
+  "contact": {
+    "relationship": {
+      "coding": {
+        "system": { "-value": "http://hl7.org.uk/fhir/ValueSet/CareConnect-PersonRelationshipType" },
+        "code": { "-value": "01" },
+        "display": { "-value": "Spouse" }
+      }
+    },
+    "name": {
+      "use": { "-value": "usual" },
+      "family": { "-value": "Smith" },
+      "given": { "-value": "Joy" },
+      "prefix": { "-value": "Mrs" }
+    },
+    "telecom": [
+      {
+        "system": { "-value": "phone" },
+        "value": { "-value": "0712345678" },
+        "use": { "-value": "mobile" }
+      },
+      {
+        "system": { "-value": "email" },
+        "value": { "-value": "mrssmith@mymail.com" }
+      }
+    ],
+    "gender": { "-value": "female" }
+  }
+}
 ```
 
 *Error Handling*

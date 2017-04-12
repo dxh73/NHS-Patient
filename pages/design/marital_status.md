@@ -1,13 +1,11 @@
 ---
-title: Identifier Element
-keywords: id, patient
-tags: [profile,element,id]
+title: Marital Status Element
+keywords: marital status
+tags: [marital statyus]
 sidebar: profiles_sidebar
 permalink: marital_status.html
-summary: "low level details for the care connect patient 'id' element"
+summary: "low level details for the care connect patient 'maritalStatus' element"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
-
 ## Identifier Implementation Guide ##
 
 ### Use case ###
@@ -16,62 +14,79 @@ This specification describes a single use case.
 
 ### Element Usage ###
 
-TODO
+maritalStatus is used to determine the current marital status of the patient by using a pre-defined set of codes using the valueset CareConnect-MaritalStatus-1. This valueset has a `required` binding.
 
-### Enter element here!!! ###
+### Marital Status ###
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
+| Complex| maritalStatus| CodeableConcept | Marital status of the patient.  |
 
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
+- `maritalStatus` *may* be used but **must** include a code from the CareConnect-MaritalStatus-1 valueset
+- Element **must** include the child elements:
 
+	- system **must** have a url of http://hl7.org.uk/CareConnect-MaritalStatus-1.valueset.xml
+	- code **must** be a code included the CareConnect-MaritalStatus-1 valueset
+	- display **must** match up with its relevant code
 
-### Enter extensions here!! ###
-
-
+- UNK code **must not** be used
 
 ```http
-enter extensions url here!!
+http://hl7.org.uk/CareConnect-MaritalStatus-1.valueset.xml
 ```
+Codes from the inline code system [http://hl7.org/fhir/marital-status:](http://hl7.org/fhir/marital-status)
 
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
+|Code|Display|Defintion|
+|U|Unmarried|The person is not presently married. The marital history is not known or stated.|
 
-The extensions uses the following valueset:
+Codes from the external code system [http://hl7.org.uk/CareConnect-MaritalStatus:](http://hl7.org.uk/CareConnect-MaritalStatus)
 
-```http
-Enter valuesets here!!
-```
-Links to valuesets here!!
+|Code|Display|Defintion|
+|D|Divorced|
+|L|Legally Separated|
+|M|Married|
+|S|Never Married|
+|W|Widowed|
 
-Valueset table here if viable!!
+{% include warning.html content="CareConnect-MaritalStatus-1 valueset has a code of UNK from the external code system [http://hl7.org/fhir/v3/NullFlavor:](http://hl7.org/fhir/v3/NullFlavor:). This **MUST NOT** be used in any implementation." %}
+
 
 On the wire XML example
 
 ```xml
-xml example here!!
+<maritalStatus>
+	<coding>
+		<system value="http://hl7.org/fhir/marital-status"/>
+		<code value="M"/>
+		<display value="Married"/>
+	</coding>
+</maritalStatus>
 ```
 
 On the wire example in JSON
 
 ```json
-JSON example here!!
+{
+  "maritalStatus": {
+    "coding": {
+      "system": { "-value": "http://hl7.org/fhir/marital-status" },
+      "code": { "-value": "M" },
+      "display": { "-value": "Married" }
+    }
+  }
+}
 ```
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-error here!!
+- An invalid marital code is used
+- The system url is not http://hl7.org.uk/CareConnect-MaritalStatus-1.valueset.xml
+- UNK code is used
+- The display value is incorrect
 
-## RESTful Usage ##
 
-
-Examples
 
 
 

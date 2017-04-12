@@ -1,13 +1,11 @@
 ---
-title: Identifier Element
-keywords: id, patient
-tags: [profile,element,id]
+title: deceased Element
+keywords: deceased
+tags: [deceased, ]
 sidebar: profiles_sidebar
 permalink: deceased.html
 summary: "low level details for the care connect patient 'id' element"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
-
 ## Identifier Implementation Guide ##
 
 ### Use case ###
@@ -16,62 +14,44 @@ This specification describes a single use case.
 
 ### Element Usage ###
 
-TODO
+The deceased element provides an implementer a choice of data types to represent whether the patient is deceased. Only one of the two choices can be used to make this representation.
 
-### Enter element here!!! ###
+### Deceased ###
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
+| Choice| deceased| boolean or dateTime | Element used to determine if the patient is deceased using a true/false value or a date and time value.|
 
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
-
-
-### Enter extensions here!! ###
-
-
-
-```http
-enter extensions url here!!
-```
-
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
-
-The extensions uses the following valueset:
-
-```http
-Enter valuesets here!!
-```
-Links to valuesets here!!
-
-Valueset table here if viable!!
-
-On the wire XML example
+- Boolean or dateTime value **MUST** be used with this element
+- A time and timezone value *may* be used as part of the value
 
 ```xml
-xml example here!!
+<deceasedBoolean value="false"/>
+```
+```xml
+<deceasedDateTime value="1973-12-10"/>
 ```
 
 On the wire example in JSON
 
 ```json
-JSON example here!!
+{
+  "deceasedBoolean": { "value": "true" }
+}
+```
+```json
+{
+  "deceasedDateTime": { "value": "1957-01-01" }
+}
 ```
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-error here!!
+- The dateTime value is not a valid format
+- The boolean value is not true or false or is missing. 
 
-## RESTful Usage ##
-
-
-Examples
 
 
 

@@ -15,62 +15,41 @@ This specification describes a single use case.
 
 ### Element Usage ###
 
-TODO
+birthDate is used to capture a patients known date of birth. The format DD-MM-CCCC *should* be used wherever possible. Where a full date of birth is not known, the format *shall* be either MM-CCCC or CCCC. 
 
-### Enter element here!!! ###
+### birthDate ###
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
-
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
+| Primitive| birthDate| date | Patients registered date of birth |
 
 
-### Enter extensions here!! ###
-
-
-
-```http
-enter extensions url here!!
-```
-
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
-
-The extensions uses the following valueset:
-
-```http
-Enter valuesets here!!
-```
-Links to valuesets here!!
-
-Valueset table here if viable!!
+- 'birthDate' **MUST** be used. 
+- A time value is not required as part of the date of birth
+- Timezone should not be used as part of the date of birth.
+- The date value must be valid e.g only 30th September but not 31st September
 
 On the wire XML example
 
 ```xml
-xml example here!!
+<birthDate value="1957-01-01"/>
 ```
 
 On the wire example in JSON
 
 ```json
-JSON example here!!
+{
+  "birthDate": { "-value": "1957-01-01" }
+}
 ```
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-error here!!
-
-## RESTful Usage ##
-
-
-Examples
+- The `birthDate` value does not comply with the aforementioned format.
+- The `birthDate` value is omitted.
+- The `birthDate` value is an invalid date.
 
 
 
