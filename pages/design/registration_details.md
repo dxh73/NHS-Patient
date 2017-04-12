@@ -1,38 +1,27 @@
 ---
-title: Identifier Element
-keywords: id, patient
+title: Registration Details Complex Extension
+keywords: registration, extension
 tags: [profile,element,id]
 sidebar: profiles_sidebar
 permalink: registration_details.html
-summary: "low level details for the care connect patient 'id' element"
+summary: "low level details for the care connect patient 'registrationDetails' extension"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
-
 ## Identifier Implementation Guide ##
 
 ### Use case ###
 
 This specification describes a single use case. 
 
-### Element Usage ###
-
-TODO
-
-### Enter element here!!! ###
+### Regsitration Details ###
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
+| Complex Extension|registrationDetails| complex extension|
+
+
+### Extension Usage ###
 
 - 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
-
-
-### Enter extensions here!! ###
-
 
 
 ```http

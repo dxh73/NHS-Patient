@@ -32,11 +32,22 @@ The `contact` element is a backbone for additional elements that may contain the
 |organization|Reference|If the contact is an organization, a reference to that organization. The details will be captured in a different profile.|
 
 
-- If contact is used then as a minimum the `name` element **must** be populated. The same guidelines apply to this element as that used by `Patient.Name` element.
-- Where the contact is an organization, the `name` element **must** contain a contact at that organization. 
-
 ### Valuesets ##
 
+`contact` data types uses two INTEROpen valuesets. These are:
+
+[CareConnect-PersonRelationshipType-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-PersonRelationshipType-1.valueset.html)
+
+The `relationship` data type uses this valueset to describe the relationship between the person and the patient. This is a required valueset and one of the codes **must** be used when this element is populated.
+The valueset contains a set of 51 codes with a related display and definition. 
+
+CareConnect-AdministrativeGender-1
+
+This valueset is the same as that used by Patient.gender. See this element for more details.
+
+
+- If contact is used then as a minimum the `name` element **must** be populated. The same guidelines apply to this element as that used by `Patient.Name` element.
+- Where the contact is an organization, the `name` element **must** contain a contact at that organization. 
 
 
 On the wire XML example
@@ -107,12 +118,8 @@ On the wire example in JSON
 
 The provider system SHALL return an error if:
 
-error here!!
+TODO - Further thoughts need on this. Look at bus acks ??
 
-## RESTful Usage ##
-
-
-Examples
 
 
 
