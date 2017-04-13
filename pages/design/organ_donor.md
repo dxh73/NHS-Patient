@@ -1,77 +1,59 @@
 ---
-title: Identifier Element
-keywords: id, patient
-tags: [profile,element,id]
+title: Organ Donor Extension
+keywords: Organ, donor
+tags: [organ,donor]
 sidebar: profiles_sidebar
 permalink: organ_donor.html
-summary: "low level details for the care connect patient 'id' element"
+summary: "low level details for the care connect patient 'organDonor' extension"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
-
 ## Identifier Implementation Guide ##
 
 ### Use case ###
 
 This specification describes a single use case. 
 
-### Element Usage ###
-
-TODO
-
-### Enter element here!!! ###
+### Organ Donor ###
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
+| Extension| organDonor| boolean | A true or false flag to indicate if the patient is on the Organ Donor register|
 
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
+### Element Usage ###
 
+An extension has been provided to indicate if the patient has agreed to be an Organ Donor. 
 
-### Enter extensions here!! ###
+{% include important.html content="Patient must be on the organ donor register if this value is set to true" %}
 
-
-
-```http
-enter extensions url here!!
-```
-
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
-
-The extensions uses the following valueset:
-
-```http
-Enter valuesets here!!
-```
-Links to valuesets here!!
-
-Valueset table here if viable!!
+The extension has a url of http://hl7.org.uk/CareConnect-OrganDonor-1-Extension.structuredefinition.xml
 
 On the wire XML example
 
 ```xml
-xml example here!!
+<extension url="http://hl7.org.uk/fhir/CareConnect-OrganDonor-1-Extension">
+		<valueBoolean value="true"/>
+</extension>
 ```
 
 On the wire example in JSON
 
 ```json
-JSON example here!!
+{
+  "extension": {
+    "-url": "http://hl7.org.uk/fhir/CareConnect-OrganDonor-1-Extension",
+    "valueBoolean": { "-value": "true" }
+  }
+}
 ```
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-error here!!
-
-## RESTful Usage ##
+- The value is not set to true or false
 
 
-Examples
+
+
 
 
 

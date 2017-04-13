@@ -1,12 +1,11 @@
 ---
-title: Identifier Element
-keywords: id, patient
-tags: [profile,element,id]
+title: Birth Time Extension
+keywords: birth, time
+tags: [birth,extension]
 sidebar: profiles_sidebar
 permalink: birthtime.html
-summary: "low level details for the care connect patient 'id' element"
+summary: "low level details for the care connect patient 'birthTime' extension"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
 
 ## Identifier Implementation Guide ##
 
@@ -14,64 +13,60 @@ summary: "low level details for the care connect patient 'id' element"
 
 This specification describes a single use case. 
 
-### Element Usage ###
 
-TODO
 
-### Enter element here!!! ###
+### birthTime ###
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
+| Extension| birthTime| dateTime |The time of day that the patient was born. This includes the date to ensure that the time zone information can be communicated effectively.|
 
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
+An optional extension that *may* be used to capture to time of a patients birth. 
 
+### Extension Usage ###
 
-### Enter extensions here!! ###
+The data type of dateTime requires the implantation to follow the following guidelines:
 
+- Time **must** contain a date in addition to the time.
+- The time **must** use a 24hr format 
+- The time **must** be present, with seconds being optional. The time 24:00 is not valid.
+- A timezone **must** be used. 
 
-
-```http
-enter extensions url here!!
-```
-
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
-
-The extensions uses the following valueset:
+The extension url is:
 
 ```http
-Enter valuesets here!!
+http://hl7.org/fhir/StructureDefinition/patient-birthTime
 ```
-Links to valuesets here!!
 
-Valueset table here if viable!!
+{% include important.html content="The extension is not an extension of birthDate, but an extension of the CareConnect-Patient-1 profile. Its location in the XML structure must be correct" %}
 
 On the wire XML example
 
 ```xml
-xml example here!!
+<extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
+	<valueDateTime value="2016-01-02T08:39:16+00:00"/>
+</extension>
 ```
 
 On the wire example in JSON
 
 ```json
-JSON example here!!
+{
+  "extension": {
+    "-url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+    "valueDateTime": { "-value": "2016-01-02T08:39:16+00:00" }
+  }
+}
 ```
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-error here!!
+- `birthTime` is missing a time
+- `birthTime` is missing a timezone
+- `birthTime` date part does not match with the value in `birthDate`
 
-## RESTful Usage ##
-
-
-Examples
 
 
 

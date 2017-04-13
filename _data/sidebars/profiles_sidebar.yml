@@ -72,7 +72,7 @@ entries:
           url: /organ_donor.html
           output: web
         - title: residentialStatus
-          url: /resistatus.html
+          url: /residential_status.html
           output: web
         - title: treatmentCategory
           url: /treatment_category.html
