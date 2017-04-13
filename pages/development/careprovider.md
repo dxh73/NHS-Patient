@@ -4,10 +4,8 @@ keywords: care, provider
 tags: [care]
 sidebar: profiles_sidebar
 permalink: care_provider.html
-summary: "low level details for the care connect patient 'id' element"
+summary: "low level details for the care connect patient 'careProvider' element"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
-
 ### Use case ###
 
 This specification describes a single use case. 

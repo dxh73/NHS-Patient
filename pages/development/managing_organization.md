@@ -4,10 +4,8 @@ keywords: organization, provider
 tags: [organization]
 sidebar: profiles_sidebar
 permalink: managing_organization.html
-summary: "low level details for the care connect patient 'id' element"
+summary: "low level details for the care connect patient 'managingOrganization' element"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
-
 ### Use case ###
 
 This specification describes a single use case. 
@@ -16,16 +14,16 @@ This specification describes a single use case.
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Reference| careProvider| Reference | A reference to another profile within the API|
+| Reference| managingOrganiation| Reference | A reference to another profile within the API|
 
 
 ### Element Usage ###
 
-careProvider creates a reference to two existing Care Connect profiles; CareConnect-Organization-1 and CareConnect-Practitioner-1.
+`ManagingOrganization` creates a reference to CareConnect-Organization-1, an existing profile used within Care Connect.
 
-This profile **MUST** only use one of these profiles, which captures details about the patients organization, such as GP Practice or the patients practitioner, such as a consultant.
+This is the only profile that can be referenced and captures details about the patients organization, such as GP Practice.
 
-Element is a reference only and does not contain any organization or practitioner information.
+Element is a reference only and does not contain any organization.
 
 The reference value **MUST** follow a format of "Resource/UUID" where the UUID is the profile.id value used by the referenced profile, usually found within a bundle. The display value is optional, but recommended.
 
