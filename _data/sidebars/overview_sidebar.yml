@@ -67,9 +67,6 @@ entries:
     - title: Getting Started
       url: /tag_getting_started.html
       output: web
-    - title: First of Type
-      url: /tag_first_of_type.html
-      output: web
     - title: FHIR&reg;
       url: /tag_fhir.html
       output: web
@@ -88,30 +85,12 @@ entries:
     - title: Integration
       url: /tag_integration.html
       output: web
-    - title: Testing
-      url: /tag_testing.html
-      output: web
-    - title: Assurance
-      url: /tag_assurance.html
-      output: web
     - title: Deployment
       url: /tag_deployment.html
       output: web
     - title: Support
       url: /tag_support.html
       output: web	  
-    - title: Clinical Safety
-      url: /tag_clinical_safety.html
-      output: web
-    - title: Information Governance
-      url: /tag_information_governance.html
-      output: web
-    - title: Commissioning
-      url: /tag_commissioning.html
-      output: web
-    - title: Code Snippet
-      url: /tag_code_snippet.html
-      output: web
     - title: Profile
       url: /tag_profile.html
       output: web

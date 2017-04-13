@@ -25,13 +25,20 @@ This specification describes a single use case.
 
 This complex extension consists of 3 simple extensions to capture patient registration information. 
 
-**language**
+The url for the complex extension is:
 
+`http://hl7.org.uk/CareConnect-NhsCommunication-1-Extension.structuredefinition.xml`
+
+
+**language**
+{% include important.html content="Required Binding" %}
 The language in which the patient wishes to communicate. Only one language can be used captured here.
 
 The extension has a url `language`
 
-The codes are available from the pre-defined valueset [ CareConnect-HumanLanguage-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-HumanLanguage-1.valueset.html).
+The codes are available from the pre-defined valueset [ CareConnect-HumanLanguage-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-HumanLanguage-1.valueset.html). Codes **MUST** be in lower-case characters.
+
+
 
 The valueset *may* have a coding.system but **MUST** have a value of http://www.interopen.org/candidate-profiles/care-connect/CareConnect-HumanLanguage-1.valueset.html when used.
 
@@ -49,10 +56,10 @@ Extension uses a boolean value of true or false to indicate if this is the prefe
 The extension has a url `preferred`
 
 **modeOfCommunication**
-
+{% include important.html content="Required Binding" %}
 Extension uses codeableConcept CareConnect-LanguageAbilityMode-1 to capture the mode of communication the patient has requested. 
 
-The codes are available from the pre-defined valueset [CareConnect-LanguageAbilityMode-1](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-LanguageAbilityMode-1.valueset.html).
+The codes are available from the pre-defined valueset [CareConnect-LanguageAbilityMode-1](http://hl7.org.uk/CareConnect-LanguageAbilityMode-1.valueset.xml).
 
 |Code|	Display|
 |ESGN|Expressed signed
@@ -71,7 +78,7 @@ The coding.display *may* be used but **must** have a value that matches the codi
 The extension has a url `modeOfCommunication`
 
 **communicationProficiency**
-
+{% include important.html content="Required Binding" %}
 Extension uses codeableConcept CareConnect-LanguageAbilityMode-1 to capture the mode of communication the patient has requested. 
 
 The codes are available from the pre-defined valueset [CareConnect-LanguageAbilityProficiency-1](http://hl7.org.uk/CareConnect-LanguageAbilityProficiency-1.valueset.xml).
@@ -90,40 +97,51 @@ The coding.display *may* be used but **must** have a value that matches the codi
 
 The extension has a url `communicationProficiency`
 
-**interpreterRequired**
+**interpreterRequired** 
 
 
 Extension uses a boolean value of true or false to indicate if an interpreter is required for the patient. 
 
 The extension has a url `interpreterRequired`
 
+### Examples ###
+
 ```xml
-  <extension url="http://hl7.org.uk/CareConnect-RegistrationDetails-1-Extension.xml" >
-    <extension url="registrationPeriod" >
-      <valuePeriod>
-        <start value="2012-01-05" />
-        <end value="2012-01-05" />
-      </valuePeriod>
-    </extension>
-    <extension url="registrationType" >
-      <valueCodeableConcept>
-		   <coding>
-			   <system value="http://hl7.org.uk/CareConnect-RegistrationType-1.xml"/>
-			   <code value="R"/>
-			   <display value="Regular"/>
-		   </coding>
-      </valueCodeableConcept>
-    </extension>
-  <extension url="registrationStatus" >
-      <valueCodeableConcept>
-		   <coding>
-			   <system value="http://hl7.org.uk/CareConnect-RegistrationStatus-1.xml"/>
-			   <code value="A"/>
-			   <display value="Active"/>
-		   </coding>
-      </valueCodeableConcept>
-    </extension>
-  </extension>	
+<extension url="http://hl7.org.uk/CareConnect-NhsCommunication-1-Extension.structuredefinition.xmll" >
+	<extension url="language" >
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://hl7.org.uk/CareConnect-RegistrationType-1.xml"/>
+				<code value="en"/>
+				<display value="English"/>
+			</coding>
+		</valueCodeableConcept>
+	</extension>
+	<extension url="preferred">
+		<valueBoolean value="false"/>
+	</extension>
+	<extension url="modeOfCommunication" >
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://hl7.org.uk/CareConnect-LanguageAbilityMode-1.valueset.xml"/>
+				<code value="ESP"/>	
+				<display value="Expressed Spoken"/>
+			</coding>
+		</valueCodeableConcept>
+	</extension>
+	<extension url="communicationProficiency" >
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://hl7.org.uk/CareConnect-LanguageAbilityProficiency-1.valueset.xml"/>
+				<code value="F"/>
+				<display value="Fair"/>
+			</coding>
+		</valueCodeableConcept>
+	</extension>
+	<extension url="interpreterRequired">
+		<valueBoolean value="false"/>
+	</extension>
+</extension>
 ```
 
 On the wire example in JSON
@@ -131,34 +149,45 @@ On the wire example in JSON
 ```json
 {
   "extension": {
-    "-url": "http://hl7.org.uk/CareConnect-RegistrationDetails-1-Extension.xml",
+    "-url": "http://hl7.org.uk/CareConnect-NhsCommunication-1-Extension.structuredefinition.xmll",
     "extension": [
       {
-        "-url": "registrationPeriod",
-        "valuePeriod": {
-          "start": { "-value": "2012-01-05" },
-          "end": { "-value": "2012-01-05" }
-        }
-      },
-      {
-        "-url": "registrationType",
+        "-url": "language",
         "valueCodeableConcept": {
           "coding": {
             "system": { "-value": "http://hl7.org.uk/CareConnect-RegistrationType-1.xml" },
-            "code": { "-value": "R" },
-            "display": { "-value": "Regular" }
+            "code": { "-value": "en" },
+            "display": { "-value": "English" }
           }
         }
       },
       {
-        "-url": "registrationStatus",
+        "-url": "preferred",
+        "valueBoolean": { "-value": "false" }
+      },
+      {
+        "-url": "modeOfCommunication",
         "valueCodeableConcept": {
           "coding": {
-            "system": { "-value": "http://hl7.org.uk/CareConnect-RegistrationStatus-1.xml" },
-            "code": { "-value": "A" },
-            "display": { "-value": "Active" }
+            "system": { "-value": "http://hl7.org.uk/CareConnect-LanguageAbilityMode-1.valueset.xml" },
+            "code": { "-value": "ESP" },
+            "display": { "-value": "Expressed Spoken" }
           }
         }
+      },
+      {
+        "-url": "communicationProficiency",
+        "valueCodeableConcept": {
+          "coding": {
+            "system": { "-value": "http://hl7.org.uk/CareConnect-LanguageAbilityProficiency-1.valueset.xml" },
+            "code": { "-value": "F" },
+            "display": { "-value": "Fair" }
+          }
+        }
+      },
+      {
+        "-url": "interpreterRequired",
+        "valueBoolean": { "-value": "false" }
       }
     ]
   }

@@ -4,17 +4,10 @@ keywords: design
 tags: [design]
 sidebar: overview_sidebar
 permalink: history.html
-summary: An overview of the development tools / code examples available to help develop provider and consumder systems.
+summary: Current version and historic details for the Care Connect Patient API.
 ---
 
-## System Design ##
+## DRAFT A; Version 1.0 ##
 
-Overview of any design-time resources that are available.
+Initial release of the CareConnect-Patient-1 Profile
 
-## System Implementation ##
-
-Overview of any implementation resources that are available.
-
-## System Test ##
-
-Overview of any testing resources that are available.
