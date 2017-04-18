@@ -29,9 +29,24 @@ Gender element provides an code to indicate the sex or gender of the patient to 
 
 Gender uses the INTEROpen valueset CareConnect-AdministrativeGender-1 which **MUST** be used to identify the patients gender. No other codes are valid.
 
+Example of Correct Usage
+
+|Usage| Element| examples| Comments|
+|![Tick](images/tick.png)|`gender`|male|Gender stored using correct code|
+|![Tick](images/tick.png)| | female||
+|![Tick](images/tick.png)||other||
+
+Example of Incorrect Usage
+
+|Usage| Element| examples| Comments|
+|![Tick](images/tick.png)|`gender`|Male|Gender stored using incorrect code|
+|![Tick](images/tick.png)| |Female||
+|![Tick](images/tick.png)||O||
+
 ```http
 http://hl7.org.uk/CareConnect-AdministrativeGender-1.valueset.xml
 ```
+
 |Code|Display|Definition|
 |male|Male|Male|
 |female|Female|Female|

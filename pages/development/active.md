@@ -6,21 +6,21 @@ sidebar: profiles_sidebar
 permalink: active.html
 summary: "low level details for the care connect patient 'id' element"
 ---
-## Identifier Implementation Guide ##
+## Active Implementation Guide ##
 
 ### Use case ###
 
 This specification describes a single use case. 
-
-### Element Usage ###
-
-Care Connect uses the Patient.Active element as an indicator as to whether the patients record is in active use. The default value is true. 
 
 ### Active ###
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
 | Primitive| active| Boolean | A true or false value that indicates if the patients record is currently in active used. |
+
+### Element Usage ###
+
+Care Connect uses the Patient.Active element as an indicator as to whether the patients record is in active use. The default value is true. 
 
 - 'active' **MAY** be used where available. It is not a mandatory element.
 - Default value = true

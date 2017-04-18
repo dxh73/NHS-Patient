@@ -19,9 +19,6 @@ entries:
   - title: Design Approach
     output: web
     folderitems:
-    - title: Maturity Model
-      url: /design_overview.html
-      output: web
     - title: Product Versioning
       url: /history.html
       output: web

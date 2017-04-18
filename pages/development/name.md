@@ -6,7 +6,7 @@ sidebar: profiles_sidebar
 permalink: name.html
 summary: "low level details for the care connect patient 'name' element"
 ---
-## Identifier Implementation Guide ##
+## Name Implementation Guide ##
 
 ### Use case ###
 
@@ -26,8 +26,41 @@ Care Connect uses the Patient.Name element and creates two independent sliced el
 
 - `name` **MUST** be used present either using `usual` or `other`.
 - `usual` **MUST** include the `use` child element which **MUST** have a value of "usual"
-- `family` child element **MUST** be populated
+- `given` is a recommend value and *may* inlcude middle names.
+- `family` child element **MUST** be populated and only using alphabetic characters.
+- `prefix` *may* be used.
 - Only one instance of `usual` can be used
+
+**Recommendations**
+
+- `family` element should be stored in uppercase letters to help distinguish it from the given names where used.
+- `given` element should be stored in title case where used. For example David not DAVID or david.
+- Where `given` consists of multiple components, these should be separated by a hyphen or space. e.g. Laura Jane or Mary-Anne. 
+- `prefix` element should be stored in title case where used. For example Mrs not MRS.
+
+**PDS and GDSC**
+
+The name element and its child elements are only limited in FHIR by a 1Mb size. It is recommended that an additional limitation of a maximum 40 characters for `name` element and its child elements is defined to fall in line with the requirements defined by the Personal Demographic Service (PDS). 
+
+- `prefix` should have a maximum length of 35 characters
+- `family` should have a maximum length of 40 characters.
+- `given` should have a maximum length of 40 characters.
+
+Examples of Correct Usage
+
+|Usage| Element| examples| Comments|
+|![Tick](images/tick.png)|`family` name| HENDERSON| Patient family name|
+|![Tick](images/tick.png)|`given` name| David| Patient given name|
+|![Tick](images/tick.png)|`given` name| Laura Jane| Patient given name|
+|![Tick](images/tick.png)|`prefix` name| Mr| Patients prefix.|
+
+Examples of Incorrect Usage
+
+|Usage| Element| examples| Comments|
+|![Cross](images/cross.png)|`family` name| henderson| Not in uppercase|
+|![Cross](images/cross.png)|`given` name| david| Not in title case|
+|![Cross](images/cross.png)|`family` name| laura jane| Not in title case. |
+|![Cross](images/cross.png)|`family` name| mrs| Does not have title case|
 
 The child element `use` **MUST** use values found in the following valueset:
 
@@ -85,6 +118,7 @@ The child element `use` **MUST** use values found in the NameUse valueset. Detai
 ```http
 http://hl7.org/fhir/ValueSet/name-use
 ```
+The same recommendations apply to `other` as they do to `usual`.
 
 ### On the wire XML example ###
 
