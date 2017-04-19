@@ -6,7 +6,7 @@ sidebar: profiles_sidebar
 permalink: organ_donor.html
 summary: "low level details for the care connect patient 'organDonor' extension"
 ---
-## Identifier Implementation Guide ##
+## Organ Donor Implementation Guide ##
 
 ### Use case ###
 

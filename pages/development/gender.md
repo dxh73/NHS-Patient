@@ -6,7 +6,7 @@ sidebar: profiles_sidebar
 permalink: gender.html
 summary: "low level details for the care connect patient 'gender' element"
 ---
-## Identifier Implementation Guide ##
+## Gender Implementation Guide ##
 
 ### Use case ###
 
@@ -29,6 +29,17 @@ Gender element provides an code to indicate the sex or gender of the patient to 
 
 Gender uses the INTEROpen valueset CareConnect-AdministrativeGender-1 which **MUST** be used to identify the patients gender. No other codes are valid.
 
+```http
+http://hl7.org.uk/CareConnect-AdministrativeGender-1.valueset.xml
+```
+
+|Code|Display|Definition|
+|male|Male|Male|
+|female|Female|Female|
+|other|Other|Other|
+|unknown|Unknown|Unknown|
+
+
 Example of Correct Usage
 
 |Usage| Element| examples| Comments|
@@ -39,19 +50,11 @@ Example of Correct Usage
 Example of Incorrect Usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`gender`|Male|Gender stored using incorrect code|
-|![Tick](images/tick.png)| |Female||
-|![Tick](images/tick.png)||O||
+|![Cross](images/cross.png)|`gender`|Male|Gender stored using incorrect code|
+|![Cross](images/cross.png)| |Female||
+|![Cross](images/cross.png)||O||
 
-```http
-http://hl7.org.uk/CareConnect-AdministrativeGender-1.valueset.xml
-```
 
-|Code|Display|Definition|
-|male|Male|Male|
-|female|Female|Female|
-|other|Other|Other|
-|unknown|Unknown|Unknown|
 
 
 On the wire XML example

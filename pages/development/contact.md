@@ -8,7 +8,7 @@ summary: "low level details for the care connect patient 'id' element"
 ---
 {% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
 
-## Identifier Implementation Guide ##
+## Contact Implementation Guide ##
 
 ### Use case ###
 

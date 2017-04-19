@@ -43,13 +43,15 @@ A structured address consists of:
 
 {% include important.html content="County is no longer used by the Post Office and is not part of the Post Office Address file (PAF). There is no requirement to use this" %}
 
+**Examples of Correct Usage**
+
 |Usage| Element| examples| Comments|
 |![Tick](images/tick.png)|`line`| Floor 9|Identify location in a building |
 |![Tick](images/tick.png)|`line`| Durham House|Building name in title case|
 |![Tick](images/tick.png)|`city`| Washington|Town in title case|
 |![Tick](images/tick.png)|`postalcode`|NE38 7SF| Post code, uppercase with space|
 
-Examples of Incorrect Usage
+**Examples of Incorrect Usage**
 
 |Usage| Element| examples| Comments|
 |![Cross](images/cross.png)|`line`|Floor 9, Durham House|Partially unstructured. Should split this onto different lines|

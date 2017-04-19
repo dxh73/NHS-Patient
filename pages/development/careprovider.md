@@ -6,6 +6,9 @@ sidebar: profiles_sidebar
 permalink: care_provider.html
 summary: "low level details for the care connect patient 'careProvider' element"
 ---
+
+## Care Provider Implementation Guide ##
+
 ### Use case ###
 
 This specification describes a single use case. 

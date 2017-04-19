@@ -6,6 +6,8 @@ sidebar: profiles_sidebar
 permalink: nhs_comms.html
 summary: "low level details for the care connect patient 'nhsCommunication' extension"
 ---
+## NHS Communication Implementation Guide ##
+
 ### Use case ###
 
 This specification describes a single use case. 

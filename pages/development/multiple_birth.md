@@ -6,9 +6,7 @@ sidebar: profiles_sidebar
 permalink: multiple_birth.html
 summary: "low level details for the care connect patient 'multipleBirth' element"
 ---
-{% include important.html content="The identifier element described is  used to provide a unique method to identify a NHS patient. It is not the identifier for the FHIR message" %}
-
-## Identifier Implementation Guide ##
+## Multiple Birth Implementation Guide ##
 
 ### Use case ###
 
@@ -23,11 +21,10 @@ This specification describes a single use case.
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
 |Choice| multipleBirth| boolean/integer|Indicates if the patient (baby) is part of a multiple birth.|
-|Complex| ||| |
-|Extension||| |
 
 - `multipleBirth` **must** be either a numeric value or a boolean value.
 - Only one instance of a `multipleBirth` is permitted.
+
 
 On the wire XML example
 

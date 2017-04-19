@@ -7,7 +7,7 @@ permalink: religious_affiliation.html
 summary: "low level details for the care connect patient 'religiousAffiliation' extension"
 ---
 
-## Identifier Implementation Guide ##
+## Religious Affiliation Implementation Guide ##
 
 ### Use case ###
 

@@ -6,7 +6,7 @@ sidebar: profiles_sidebar
 permalink: telecom.html
 summary: "low level details for the care connect patient 'telecom' element"
 ---
-## Identifier Implementation Guide ##
+## Telecom Implementation Guide ##
 
 ### Use case ###
 
@@ -34,26 +34,26 @@ Telecom element is a string data type, therefore does not enforce any formats. B
 
 The E.123 and E.164 standards recommended by the International Telecommunications Union (ITU) provides guidelines for the presentation of telephone numbers and email addresses and [E.164](https://www.itu.int/rec/T-REC-E.164/en) provides the international public telecommunication numbering plan. These standards are presentation standards which **MAY** be followed by implementers, however these are not standards for the storing of telecommunication values.
 
-**Recommended strings**
 
-**UK Land Numbers**
+**UK Numbers**
 
-UK land numbers, including fax numbers **MUST** be stored with a leading 0 followed by the remaining part of the area code and then the subscriber number. Spaces between numbers **MUST NOT** be included.
+UK numbers, including land line, fax and mobile numbers **MUST** be stored with a leading 0 followed by the remaining part of the area code and then the subscriber number. A Space between area code and subscriber number **MUST** be included.
 
-**UK Examples**
+**Examples of Correct UK Usage**
 
-01911231234
-01133973861
+|Usage| System| examples| Comments|
+|![Tick](images/tick.png)|`phone`|0191 1231234 |UK number with a space between area code and subscriber number|
+|![Tick](images/tick.png)||07702 123123|UK mobile number with a space between code and subscriber number|
 
-**UK Mobile Numbers**
+**Examples of Incorrect UK Usage**
 
-Mobile numbers *may* include the country code as part of subscriber number, with the leading 0 stripped. Spaces **MUST NOT** be included.
-
-**Mobile Examples**
-
-447702341221
-07702123456
-
+|Usage|System|Examples| Comments|
+|-----|------|-----------------|----------------------------------------------------------------------------|
+|![Cross](images/cross.png)|`phone`| 01911231234|The area code and subscriber numbers are no separated by a space|
+|![Cross](images/cross.png)||(0191)1231234|The area code is enclosed using parentheses|
+|![Cross](images/cross.png)||1231234|The area code is missing|
+|![Cross](images/cross.png)||+44 0191 1231234|The international code is not required for a UK number|
+|![Cross](images/cross.png)||+441911231234|This is difficult to read due to the unnecessary international dialing code in addition to the dropped leading zero and no spacing between the components of the number.|
 
 **International Numbers**
 
@@ -63,40 +63,51 @@ IDD code **MUST** match the country code associated with it. A full list of IDD 
 
 [IDD and Country Codes](http://www.area-codes.org.uk/international/)
 
-**International Examples**
+**Examples of Correct International Usage**
 
-00441914021212
-00441123973861
+|Usage| System| examples| Comments|
+|![Tick](images/tick.png)|`phone`|44 191 1231234 |UK number with a international dialling code with spaces between each component of the number|
+|![Tick](images/tick.png)||44 7702 123123|UK number with a international dialling code with spaces between each component of the number|
+
+**Examples of Incorrect International Usage**
+
+|Usage| System| examples| Comments|
+|![Cross](images/cross.png)|`phone`| +4401911231234|The international dialling code has a + symbol, followed by a leading zero and no spaces to separate each component of the number.|
+|![Cross](images/cross.png)|| 44 0191 1231234|The leading zero in the area code is not required.|
+|![Cross](images/cross.png)||441911231234|There is no spacing between the components of each element|
+
 
 **Email Addresses**
 
 An email address **MUST** consist of name and domain parts to form the address. Each part must be separated using the @ symbol.
 
-**Email Examples**
+**Examples of Correct Email Usage**
 
-John.Smith@nhs.net
-johnsmith@nhs.net
+|Usage| System| examples| Comments|
+|![Tick](images/tick.png)|`email`|john.smith@nhs.net |Email with given name and family name separated by a '.' with the name and domain separated by a @ symbol|
+|![Tick](images/tick.png)||johnsmith@nhs.net |Email with given and family name combined and domain separated by a @ symbol|
+
+**Examples of Incorrect Email Usage**
+
+|Usage| System| examples| Comments|
+|![Cross](images/cross.png)|`email`|john.smith.nhs.net |Email address does not separate name and domain with an @ symbol.|
+|![Cross](images/cross.png)||john@smith@nhs.net |Email contains two @ symbols|
 
 **URL**
 
 Skype, Twitter, facebook and other online systems that are expressed as a URL **MAY** be used as a contact method. Note that a Skype number will follow the same format as a UK landline subscriber number and **MUST NOT** be used here. 
 
-**URL examples**
+**Examples of Correct URL Usage**
 
-@johnsmith
-@NHSDigital
-https://www.facebook.com/john.smith
-skype:johnsmith?call
-skype:johnsmith?chat
+|Usage| System| examples| Comments|
+|![Tick](images/tick.png)|`url`|@johnsmith|A valid twitter address, beginning with an @ symbol|
+|![Tick](images/tick.png)||https://www.facebook.com/john.smith|A valid facebook contact addresss.|
+|![Tick](images/tick.png)||skype:johnsmith?call|A valid Skype contact addresss.|
+
 
 **SMS**
 
 Not to be confused with a mobile number, although *may* use the same number for phone system type. This indicates the contact method must be via a SMS text message.
-
-**SMS examples**
-
-447702341221
-07702341221
 
 **other**
 

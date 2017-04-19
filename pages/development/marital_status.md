@@ -6,7 +6,7 @@ sidebar: profiles_sidebar
 permalink: marital_status.html
 summary: "low level details for the care connect patient 'maritalStatus' element"
 ---
-## Identifier Implementation Guide ##
+## Marital Status Implementation Guide ##
 
 ### Use case ###
 
@@ -20,7 +20,7 @@ maritalStatus is used to determine the current marital status of the patient by 
 
 |Type|name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Complex| maritalStatus| CodeableConcept | Marital status of the patient.  |
+|Parent Data Type| maritalStatus| CodeableConcept | Marital status of the patient. Has child elements. |
 
 - `maritalStatus` *may* be used but **must** include a code from the CareConnect-MaritalStatus-1 valueset
 - Element **must** include the child elements:
@@ -50,8 +50,20 @@ Codes from the external code system [http://hl7.org.uk/CareConnect-MaritalStatus
 
 {% include warning.html content="CareConnect-MaritalStatus-1 valueset has a code of UNK from the external code system [http://hl7.org/fhir/v3/NullFlavor:](http://hl7.org/fhir/v3/NullFlavor:). This **MUST NOT** be used in any implementation." %}
 
+**Example of Correct Usage**
 
-On the wire XML example
+|Usage| Element| examples| Comments|
+|![Tick](images/tick.png)|`maritalStatus`|Code=D; Display=Divorced|Value of D indicates Divorced and is valid.|
+|![Tick](images/tick.png)||Code=S; Display=Never Married|Value of S indicates patient has never been married.|
+
+**Example of Incorrect Usage**
+
+|Usage| Element| examples| Comments|
+|![Cross](images/cross.png)|`maritalStatus`|Code=S; Display=Single|Although S is a valid code, the display value should be Never Married not Single.|
+|![Cross](images/cross.png)||Code=UNK; Display=unknown |The code UNK should not be used, despite being valid.|
+|![Cross](images/cross.png)||Code=A|The code is not found within the maritalStatus valuesets.|
+
+### On the wire XML example ###
 
 ```xml
 <maritalStatus>
@@ -63,7 +75,7 @@ On the wire XML example
 </maritalStatus>
 ```
 
-On the wire example in JSON
+### On the wire example in JSON ###
 
 ```json
 {

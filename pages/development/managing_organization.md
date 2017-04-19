@@ -6,6 +6,8 @@ sidebar: profiles_sidebar
 permalink: managing_organization.html
 summary: "low level details for the care connect patient 'managingOrganization' element"
 ---
+## Managing Organization Implementation Guide ##
+
 ### Use case ###
 
 This specification describes a single use case. 

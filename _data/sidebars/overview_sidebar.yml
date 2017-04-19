@@ -41,6 +41,9 @@ entries:
         - title: Patient API
           url: /care_connect_patient_overview.html
           output: web
+        - title: Data Models
+          url: /pat_data_models.html
+          output: web
           
   - title: System Architecture
     output: web

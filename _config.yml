@@ -98,9 +98,9 @@ description: "Description of the site."
 sitemap: true
 
 # needed for sitemap.xml file only
-url: https://github_account.github.io/github_repo
+url: https://github.com/dxh73/nhs-patient
 
-repository: github_account/github_repo
+repository: dxh73/nhs-patient
 
 
 gist:

@@ -6,6 +6,8 @@ sidebar: profiles_sidebar
 permalink: residential_status.html
 summary: "low level details for the care connect patient 'residentialStatus' element"
 ---
+## Residential Status Implementation Guide ##
+
 ### Use case ###
 
 This specification describes a single use case. 

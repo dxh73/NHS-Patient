@@ -6,6 +6,7 @@ sidebar: profiles_sidebar
 permalink: link.html
 summary: "low level details for the care connect patient 'link' element"
 ---
+## Link Implementation Guide ##
 
 ### Use case ###
 

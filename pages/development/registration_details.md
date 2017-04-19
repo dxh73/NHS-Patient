@@ -6,6 +6,8 @@ sidebar: profiles_sidebar
 permalink: registration_details.html
 summary: "low level details for the care connect patient 'registrationDetails' extension"
 ---
+## Registration Details Implementation Guide ##
+
 ### Use case ###
 
 This specification describes a single use case. 
@@ -28,7 +30,7 @@ This complex extension consists of 3 simple extensions to capture patient regist
 
 The period of time that the registration occurred is captured using a dateTime format. When used, this extension **MUST** include either a start and/or end period. The extension has a url `registrationPeriod`
 
-- Date **MUST** be used and in format DD-MM-CCC
+- Date **MUST** be used and in format CCCC-MM-DD
 - Time *may* be used and in a 24 hour format and includes seconds. 24:00 is not valid. Timezone is optional.
 
 

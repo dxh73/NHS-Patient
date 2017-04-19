@@ -28,6 +28,8 @@ Care Connect uses the Patient.Identifier element and creates two independent sli
 
 - 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically located in England, Wales or Northern Ireland.
 - The NHS number **MUST** consist of a 10 digit numeric value.
+- Hyphenation in the number **MUST NOT** be used.
+- Spaces between numbers **MUST NOT** be stored.
 - The namespace for the `nhsNumber` MUST be defined as http://fhir.nhs.net/Id/nhs-number
 - The `nhsNumber` MUST be stored as a string value
 - A local identifier **MAY** be used in addition to the NHS number.
@@ -61,6 +63,21 @@ NHS Status Indicator Codes
 |06|Trace in progress|
 |07|Number not present and trace not required|
 |08|Trace postponed (baby under six weeks old)|
+
+Example of correct usage
+
+|Usage| Element| examples| Comments|
+|![Tick](images/tick.png)|`nhsNumber`| 4025561234|Patients 10 digit NHS number stored as a string|
+
+Examples of incorrect usage
+
+|Usage| Element| examples| Comments|
+|![Cross](images/cross.png)|`nhsNumber`| 402 556 1234|NHS number must not store spaces in the number|
+|![Cross](images/cross.png)|| 402-556-1234|NHS number must not use hyphenation in the number|
+
+{% include important.html content="The `other` identifier is not a national code and is subject to local guidelines" %}
+
+The language in which the patient wishes to communicate. Only one language can be used captured here.
 
 On the wire XML example
 

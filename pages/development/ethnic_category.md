@@ -6,6 +6,9 @@ sidebar: profiles_sidebar
 permalink: ethnic_category.html
 summary: "low level details for the care connect patient 'ethnicCategory' extension"
 ---
+
+## Ethnic Category Implementation Guide ##
+
 ### Use case ###
 
 This specification describes a single use case. 
