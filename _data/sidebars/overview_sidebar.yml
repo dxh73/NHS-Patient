@@ -57,6 +57,13 @@ entries:
     - title: RESTful Architecture
       url: /restful.html
       output: web  
+ 
+  - title: Help and Support
+    output: web
+    folderitems:
+    - title: Help and Support for Implementers
+      url: /helpandsupport.html
+      output: web
       
   - title: Tags
     output: web
