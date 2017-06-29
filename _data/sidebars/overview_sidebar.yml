@@ -4,7 +4,6 @@ entries:
   version: Draft A 1.0
   levels: one
   folders:
-
   - title: Overview
     output: web
     folderitems:
@@ -15,7 +14,6 @@ entries:
     - title: Glossary
       url: /overview_glossary.html
       output: web
-
   - title: Design Approach
     output: web
     folderitems:
@@ -57,20 +55,10 @@ entries:
     - title: RESTful Architecture
       url: /restful.html
       output: web  
- 
-  - title: Help and Support
-    output: web
-    folderitems:
-    - title: Help and Support for Implementers
-      url: /helpandsupport.html
-      output: web
       
   - title: Tags
     output: web
     folderitems:
-    - title: News
-      url: /tag_news.html
-      output: web
     - title: Getting Started
       url: /tag_getting_started.html
       output: web
